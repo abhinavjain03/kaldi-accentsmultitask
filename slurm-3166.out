@@ -1,0 +1,66 @@
+nnet3-am-init exp/101-recog-min/tri4_cv_train_nz_ali/final.mdl - scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min/final.mdl 
+nnet3-copy '--edits=rename-node old-name=output-0 new-name=output' scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/final.raw - 
+LOG (nnet3-copy[5.2.204~1-08848]:main():nnet3-copy.cc:114) Copied raw neural net from scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/final.raw to -
+LOG (nnet3-am-init[5.2.204~1-08848]:main():nnet3-am-init.cc:96) Initialized am-nnet (neural net acoustic model) and wrote to scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min/final.mdl
+./multitask_monster_with_inputembeddings.sh: compute average posterior and readjust priors for language 01-recognition.
+steps/nnet3/adjust_priors.sh scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt/egs_aligns
+steps/nnet3/decode.sh --nj 20 --cmd run.pl --mem 4G --stage -2 --beam 15.0 --lattice-beam 8.0 --skip-scoring false --online-ivector-dir exp/101-recog-min/nnet3/ivectors_cv_dev_nz /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg data_uttLevel/101-recog-min/cv_dev_nz_mfcc_bnf_appended scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min/decode_cv_dev_nz
+steps/nnet2/check_ivectors_compatible.sh: WARNING: One of the directories do not contain iVector ID.
+steps/nnet2/check_ivectors_compatible.sh: WARNING: That means it's you who's reponsible for keeping 
+steps/nnet2/check_ivectors_compatible.sh: WARNING: the directories compatible
+steps/nnet3/decode.sh: feature type is raw
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min/decode_cv_dev_nz
+steps/diagnostic/analyze_lats.sh: see stats in scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min/decode_cv_dev_nz/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,3,18) and mean=8.3
+steps/diagnostic/analyze_lats.sh: see stats in scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min/decode_cv_dev_nz/log/analyze_lattice_depth_stats.log
+score best paths
+local/score.sh --iter final --cmd run.pl --mem 4G data_uttLevel/101-recog-min/cv_dev_nz_mfcc_bnf_appended /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min/decode_cv_dev_nz
+local/score.sh: scoring with word insertion penalty=0.0,0.5,1.0
+score confidence and timing with sclite
+Decoding done.
+steps/nnet3/decode.sh --nj 20 --cmd run.pl --mem 4G --stage -2 --beam 15.0 --lattice-beam 8.0 --skip-scoring false --online-ivector-dir exp/101-recog-min/nnet3/ivectors_cv_test_onlynz /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg data_uttLevel/101-recog-min/cv_test_onlynz_mfcc_bnf_appended scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min/decode_cv_test_onlynz
+steps/nnet2/check_ivectors_compatible.sh: WARNING: One of the directories do not contain iVector ID.
+steps/nnet2/check_ivectors_compatible.sh: WARNING: That means it's you who's reponsible for keeping 
+steps/nnet2/check_ivectors_compatible.sh: WARNING: the directories compatible
+steps/nnet3/decode.sh: feature type is raw
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min/decode_cv_test_onlynz
+steps/diagnostic/analyze_lats.sh: see stats in scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min/decode_cv_test_onlynz/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,3,20) and mean=8.3
+steps/diagnostic/analyze_lats.sh: see stats in scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min/decode_cv_test_onlynz/log/analyze_lattice_depth_stats.log
+score best paths
+local/score.sh --iter final --cmd run.pl --mem 4G data_uttLevel/101-recog-min/cv_test_onlynz_mfcc_bnf_appended /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min/decode_cv_test_onlynz
+local/score.sh: scoring with word insertion penalty=0.0,0.5,1.0
+score confidence and timing with sclite
+Decoding done.
+steps/nnet3/decode.sh --nj 20 --cmd run.pl --mem 4G --stage -2 --beam 15.0 --lattice-beam 8.0 --skip-scoring false --online-ivector-dir exp/101-recog-min/nnet3/ivectors_cv_test_onlyindian /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg data_uttLevel/101-recog-min/cv_test_onlyindian_mfcc_bnf_appended scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min/decode_cv_test_onlyindian
+steps/nnet2/check_ivectors_compatible.sh: WARNING: One of the directories do not contain iVector ID.
+steps/nnet2/check_ivectors_compatible.sh: WARNING: That means it's you who's reponsible for keeping 
+steps/nnet2/check_ivectors_compatible.sh: WARNING: the directories compatible
+steps/nnet3/decode.sh: feature type is raw
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min/decode_cv_test_onlyindian
+steps/diagnostic/analyze_lats.sh: see stats in scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min/decode_cv_test_onlyindian/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(2,12,59) and mean=24.6
+steps/diagnostic/analyze_lats.sh: see stats in scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min/decode_cv_test_onlyindian/log/analyze_lattice_depth_stats.log
+score best paths
+local/score.sh --iter final --cmd run.pl --mem 4G data_uttLevel/101-recog-min/cv_test_onlyindian_mfcc_bnf_appended /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min/decode_cv_test_onlyindian
+local/score.sh: scoring with word insertion penalty=0.0,0.5,1.0
+score confidence and timing with sclite
+Decoding done.
+steps/nnet3/decode.sh --nj 20 --cmd run.pl --mem 4G --stage -2 --beam 15.0 --lattice-beam 8.0 --skip-scoring false --online-ivector-dir exp/101-recog-min/nnet3/ivectors_cv_test_newonlyindian /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg data_uttLevel/101-recog-min/cv_test_newonlyindian_mfcc_bnf_appended scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min/decode_cv_test_newonlyindian
+steps/nnet2/check_ivectors_compatible.sh: WARNING: One of the directories do not contain iVector ID.
+steps/nnet2/check_ivectors_compatible.sh: WARNING: That means it's you who's reponsible for keeping 
+steps/nnet2/check_ivectors_compatible.sh: WARNING: the directories compatible
+steps/nnet3/decode.sh: feature type is raw
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min/decode_cv_test_newonlyindian
+steps/diagnostic/analyze_lats.sh: see stats in scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min/decode_cv_test_newonlyindian/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(2,12,72) and mean=29.6
+steps/diagnostic/analyze_lats.sh: see stats in scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min/decode_cv_test_newonlyindian/log/analyze_lattice_depth_stats.log
+score best paths
+local/score.sh --iter final --cmd run.pl --mem 4G data_uttLevel/101-recog-min/cv_test_newonlyindian_mfcc_bnf_appended /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min/decode_cv_test_newonlyindian
+local/score.sh: scoring with word insertion penalty=0.0,0.5,1.0
+score confidence and timing with sclite
+Decoding done.
+%WER 20.57 [ 2136 / 10386, 190 ins, 347 del, 1599 sub ] scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min/decode_cv_dev_nz/wer_10_0.5
+%WER 53.26 [ 5741 / 10780, 337 ins, 1756 del, 3648 sub ] scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min/decode_cv_test_newonlyindian/wer_13_1.0
+%WER 57.20 [ 465 / 813, 17 ins, 161 del, 287 sub ] scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min/decode_cv_test_onlyindian/wer_15_1.0
+%WER 22.85 [ 1163 / 5089, 102 ins, 181 del, 880 sub ] scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min/decode_cv_test_onlynz/wer_10_1.0

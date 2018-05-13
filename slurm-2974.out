@@ -1,0 +1,19 @@
+./multitask_run_2_base.sh: line 39: 1: command not found
+./multitask_run_2_base.sh: line 40: 1: command not found
+steps/nnet3/xconfig_to_configs.py --xconfig-file exp/nnet3_combined/multitask_acc300btn_tdnn512_0.5_0.5_withcontext/configs/network.xconfig --config-dir exp/nnet3_combined/multitask_acc300btn_tdnn512_0.5_0.5_withcontext/configs/ --nnet-edits=rename-node old-name=output-0 new-name=output
+nnet3-init exp/nnet3_combined/multitask_acc300btn_tdnn512_0.5_0.5_withcontext/configs//ref.config exp/nnet3_combined/multitask_acc300btn_tdnn512_0.5_0.5_withcontext/configs//ref.raw 
+LOG (nnet3-init[5.2.204~1-08848]:main():nnet3-init.cc:80) Initialized raw neural net and wrote it to exp/nnet3_combined/multitask_acc300btn_tdnn512_0.5_0.5_withcontext/configs//ref.raw
+nnet3-info "nnet3-copy --edits='rename-node old-name=output-0 new-name=output' exp/nnet3_combined/multitask_acc300btn_tdnn512_0.5_0.5_withcontext/configs//ref.raw - |" 
+nnet3-copy '--edits=rename-node old-name=output-0 new-name=output' exp/nnet3_combined/multitask_acc300btn_tdnn512_0.5_0.5_withcontext/configs//ref.raw - 
+LOG (nnet3-copy[5.2.204~1-08848]:main():nnet3-copy.cc:114) Copied raw neural net from exp/nnet3_combined/multitask_acc300btn_tdnn512_0.5_0.5_withcontext/configs//ref.raw to -
+nnet3-init exp/nnet3_combined/multitask_acc300btn_tdnn512_0.5_0.5_withcontext/configs//ref.config exp/nnet3_combined/multitask_acc300btn_tdnn512_0.5_0.5_withcontext/configs//ref.raw 
+LOG (nnet3-init[5.2.204~1-08848]:main():nnet3-init.cc:80) Initialized raw neural net and wrote it to exp/nnet3_combined/multitask_acc300btn_tdnn512_0.5_0.5_withcontext/configs//ref.raw
+nnet3-info "nnet3-copy --edits='rename-node old-name=output-0 new-name=output' exp/nnet3_combined/multitask_acc300btn_tdnn512_0.5_0.5_withcontext/configs//ref.raw - |" 
+nnet3-copy '--edits=rename-node old-name=output-0 new-name=output' exp/nnet3_combined/multitask_acc300btn_tdnn512_0.5_0.5_withcontext/configs//ref.raw - 
+LOG (nnet3-copy[5.2.204~1-08848]:main():nnet3-copy.cc:114) Copied raw neural net from exp/nnet3_combined/multitask_acc300btn_tdnn512_0.5_0.5_withcontext/configs//ref.raw to -
+./multitask_run_2_base.sh: line 182: [: -eq: unary operator expected
+./multitask_run_2_base.sh: line 212: [: -eq: unary operator expected
+steps/nnet3/multilingual/combine_egs.sh --lang2weight '0.5,0.5' --cmd run.pl --mem 4G --samples-per-iter 400000 2 exp/nnet3_combined/multitask_acc300btn_tdnn512_0.5_0.5_withcontext/egs_aligns exp/nnet3_combined/multitask_acc300btn_tdnn512_0.5_0.5_withcontext/egs_accents exp/nnet3_combined/multitask_acc300btn_tdnn512_0.5_0.5_withcontext/egs
+cat: exp/nnet3_combined/multitask_acc300btn_tdnn512_0.5_0.5_withcontext/egs_aligns/info/ivector_dim: No such file or directory
+steps/nnet3/multilingual/combine_egs.sh: line 60: [: -ne: unary operator expected
+cat: exp/nnet3_combined/multitask_acc300btn_tdnn512_0.5_0.5_withcontext/egs_aligns/info/feat_dim: No such file or directory

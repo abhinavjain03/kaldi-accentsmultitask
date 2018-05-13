@@ -1,0 +1,78 @@
+steps/nnet3/make_bottleneck_features_from_singletask.sh --nj 20 --use-gpu true --cmd run.pl tdnn_bn.renorm data/101-recog-min/cv_dev_nz_hires data/101-recog-min/cv_dev_nz_bnf /exp/abhinav/accent_recognizer_exp/nnet3/tdnn_relufirst_1024nodes_300bnlayer_nz scratch/101-recog-min/cv_dev_nz scratch/make_bnf/101-recog-min
+steps/nnet3/make_bottleneck_features_from_singletask.sh: Generating bottleneck features using /exp/abhinav/accent_recognizer_exp/nnet3/tdnn_relufirst_1024nodes_300bnlayer_nz/final.raw model as output of 
+    component-node with name tdnn_bn.renorm.
+steps/nnet3/make_bottleneck_features_from_singletask.sh: computing CMVN stats.
+steps/compute_cmvn_stats.sh data/101-recog-min/cv_dev_nz_bnf
+Succeeded creating CMVN stats for cv_dev_nz_bnf
+steps/nnet3/make_bottleneck_features_from_singletask.sh: done making BNF feats.scp.
+steps/append_feats.sh --cmd run.pl --nj 20 data/101-recog-min/cv_dev_nz_bnf data/101-recog-min/cv_dev_nz_hires data/101-recog-min/cv_dev_nz_mfcc_bnf_appended_sp scratch/append_hires_mfcc_bnf/101-recog-min/cv_dev_nz scratch/append_mfcc_bnf/101-recog-min
+Succeeded pasting features for cv_dev_nz_mfcc_bnf_appended_sp into data/101-recog-min/cv_dev_nz_mfcc_bnf_appended_sp
+steps/compute_cmvn_stats.sh data/101-recog-min/cv_dev_nz_mfcc_bnf_appended_sp scratch/101-recog-min/make_cmvn_mfcc_bnf scratch/append_mfcc_bnf/101-recog-min
+Succeeded creating CMVN stats for cv_dev_nz_mfcc_bnf_appended_sp
+steps/nnet3/decode.sh --nj 20 --cmd run.pl --mem 4G --stage -2 --beam 15.0 --lattice-beam 8.0 --skip-scoring false --online-ivector-dir exp/101-recog-min/nnet3/ivectors_cv_dev_nz /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg data/101-recog-min/cv_dev_nz_mfcc_bnf_appended_sp scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput/101-recog-min/decode_cv_dev_nz
+steps/nnet2/check_ivectors_compatible.sh: WARNING: One of the directories do not contain iVector ID.
+steps/nnet2/check_ivectors_compatible.sh: WARNING: That means it's you who's reponsible for keeping 
+steps/nnet2/check_ivectors_compatible.sh: WARNING: the directories compatible
+steps/nnet3/decode.sh: feature type is raw
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput/101-recog-min/decode_cv_dev_nz
+steps/diagnostic/analyze_lats.sh: see stats in scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput/101-recog-min/decode_cv_dev_nz/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,3,18) and mean=8.2
+steps/diagnostic/analyze_lats.sh: see stats in scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput/101-recog-min/decode_cv_dev_nz/log/analyze_lattice_depth_stats.log
+score best paths
+local/score.sh --iter final --cmd run.pl --mem 4G data/101-recog-min/cv_dev_nz_mfcc_bnf_appended_sp /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput/101-recog-min/decode_cv_dev_nz
+local/score.sh: scoring with word insertion penalty=0.0,0.5,1.0
+score confidence and timing with sclite
+Decoding done.
+steps/nnet3/make_bottleneck_features_from_singletask.sh --nj 20 --use-gpu true --cmd run.pl tdnn_bn.renorm data/101-recog-min/cv_test_onlynz_hires data/101-recog-min/cv_test_onlynz_bnf /exp/abhinav/accent_recognizer_exp/nnet3/tdnn_relufirst_1024nodes_300bnlayer_nz scratch/101-recog-min/cv_test_onlynz scratch/make_bnf/101-recog-min
+steps/nnet3/make_bottleneck_features_from_singletask.sh: Generating bottleneck features using /exp/abhinav/accent_recognizer_exp/nnet3/tdnn_relufirst_1024nodes_300bnlayer_nz/final.raw model as output of 
+    component-node with name tdnn_bn.renorm.
+steps/nnet3/make_bottleneck_features_from_singletask.sh: computing CMVN stats.
+steps/compute_cmvn_stats.sh data/101-recog-min/cv_test_onlynz_bnf
+Succeeded creating CMVN stats for cv_test_onlynz_bnf
+steps/nnet3/make_bottleneck_features_from_singletask.sh: done making BNF feats.scp.
+steps/append_feats.sh --cmd run.pl --nj 20 data/101-recog-min/cv_test_onlynz_bnf data/101-recog-min/cv_test_onlynz_hires data/101-recog-min/cv_test_onlynz_mfcc_bnf_appended_sp scratch/append_hires_mfcc_bnf/101-recog-min/cv_test_onlynz scratch/append_mfcc_bnf/101-recog-min
+Succeeded pasting features for cv_test_onlynz_mfcc_bnf_appended_sp into data/101-recog-min/cv_test_onlynz_mfcc_bnf_appended_sp
+steps/compute_cmvn_stats.sh data/101-recog-min/cv_test_onlynz_mfcc_bnf_appended_sp scratch/101-recog-min/make_cmvn_mfcc_bnf scratch/append_mfcc_bnf/101-recog-min
+Succeeded creating CMVN stats for cv_test_onlynz_mfcc_bnf_appended_sp
+steps/nnet3/decode.sh --nj 20 --cmd run.pl --mem 4G --stage -2 --beam 15.0 --lattice-beam 8.0 --skip-scoring false --online-ivector-dir exp/101-recog-min/nnet3/ivectors_cv_test_onlynz /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg data/101-recog-min/cv_test_onlynz_mfcc_bnf_appended_sp scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput/101-recog-min/decode_cv_test_onlynz
+steps/nnet2/check_ivectors_compatible.sh: WARNING: One of the directories do not contain iVector ID.
+steps/nnet2/check_ivectors_compatible.sh: WARNING: That means it's you who's reponsible for keeping 
+steps/nnet2/check_ivectors_compatible.sh: WARNING: the directories compatible
+steps/nnet3/decode.sh: feature type is raw
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput/101-recog-min/decode_cv_test_onlynz
+steps/diagnostic/analyze_lats.sh: see stats in scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput/101-recog-min/decode_cv_test_onlynz/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,3,19) and mean=8.1
+steps/diagnostic/analyze_lats.sh: see stats in scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput/101-recog-min/decode_cv_test_onlynz/log/analyze_lattice_depth_stats.log
+score best paths
+local/score.sh --iter final --cmd run.pl --mem 4G data/101-recog-min/cv_test_onlynz_mfcc_bnf_appended_sp /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput/101-recog-min/decode_cv_test_onlynz
+local/score.sh: scoring with word insertion penalty=0.0,0.5,1.0
+score confidence and timing with sclite
+Decoding done.
+steps/nnet3/make_bottleneck_features_from_singletask.sh --nj 20 --use-gpu true --cmd run.pl tdnn_bn.renorm data/101-recog-min/cv_test_onlyindian_hires data/101-recog-min/cv_test_onlyindian_bnf /exp/abhinav/accent_recognizer_exp/nnet3/tdnn_relufirst_1024nodes_300bnlayer_nz scratch/101-recog-min/cv_test_onlyindian scratch/make_bnf/101-recog-min
+steps/nnet3/make_bottleneck_features_from_singletask.sh: Generating bottleneck features using /exp/abhinav/accent_recognizer_exp/nnet3/tdnn_relufirst_1024nodes_300bnlayer_nz/final.raw model as output of 
+    component-node with name tdnn_bn.renorm.
+steps/nnet3/make_bottleneck_features_from_singletask.sh: computing CMVN stats.
+steps/compute_cmvn_stats.sh data/101-recog-min/cv_test_onlyindian_bnf
+Succeeded creating CMVN stats for cv_test_onlyindian_bnf
+steps/nnet3/make_bottleneck_features_from_singletask.sh: done making BNF feats.scp.
+steps/append_feats.sh --cmd run.pl --nj 20 data/101-recog-min/cv_test_onlyindian_bnf data/101-recog-min/cv_test_onlyindian_hires data/101-recog-min/cv_test_onlyindian_mfcc_bnf_appended_sp scratch/append_hires_mfcc_bnf/101-recog-min/cv_test_onlyindian scratch/append_mfcc_bnf/101-recog-min
+Succeeded pasting features for cv_test_onlyindian_mfcc_bnf_appended_sp into data/101-recog-min/cv_test_onlyindian_mfcc_bnf_appended_sp
+steps/compute_cmvn_stats.sh data/101-recog-min/cv_test_onlyindian_mfcc_bnf_appended_sp scratch/101-recog-min/make_cmvn_mfcc_bnf scratch/append_mfcc_bnf/101-recog-min
+Succeeded creating CMVN stats for cv_test_onlyindian_mfcc_bnf_appended_sp
+steps/nnet3/decode.sh --nj 20 --cmd run.pl --mem 4G --stage -2 --beam 15.0 --lattice-beam 8.0 --skip-scoring false --online-ivector-dir exp/101-recog-min/nnet3/ivectors_cv_test_onlyindian /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg data/101-recog-min/cv_test_onlyindian_mfcc_bnf_appended_sp scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput/101-recog-min/decode_cv_test_onlyindian
+steps/nnet2/check_ivectors_compatible.sh: WARNING: One of the directories do not contain iVector ID.
+steps/nnet2/check_ivectors_compatible.sh: WARNING: That means it's you who's reponsible for keeping 
+steps/nnet2/check_ivectors_compatible.sh: WARNING: the directories compatible
+steps/nnet3/decode.sh: feature type is raw
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput/101-recog-min/decode_cv_test_onlyindian
+steps/diagnostic/analyze_lats.sh: see stats in scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput/101-recog-min/decode_cv_test_onlyindian/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(2,11,52) and mean=21.0
+steps/diagnostic/analyze_lats.sh: see stats in scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput/101-recog-min/decode_cv_test_onlyindian/log/analyze_lattice_depth_stats.log
+score best paths
+local/score.sh --iter final --cmd run.pl --mem 4G data/101-recog-min/cv_test_onlyindian_mfcc_bnf_appended_sp /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput/101-recog-min/decode_cv_test_onlyindian
+local/score.sh: scoring with word insertion penalty=0.0,0.5,1.0
+score confidence and timing with sclite
+Decoding done.
+%WER 20.38 [ 2117 / 10386, 204 ins, 324 del, 1589 sub ] scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput/101-recog-min/decode_cv_dev_nz/wer_8_1.0
+%WER 57.56 [ 468 / 813, 30 ins, 157 del, 281 sub ] scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput/101-recog-min/decode_cv_test_onlyindian/wer_13_0.5
+%WER 22.74 [ 1157 / 5089, 91 ins, 204 del, 862 sub ] scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput/101-recog-min/decode_cv_test_onlynz/wer_10_1.0

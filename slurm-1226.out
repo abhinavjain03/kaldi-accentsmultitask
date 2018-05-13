@@ -1,0 +1,57 @@
+2018-02-15 16:58:36,104 [steps/nnet3/train_raw_dnn.py:34 - <module> - INFO ] Starting raw DNN trainer (train_raw_dnn.py)
+2018-02-15 16:58:36,115 [steps/nnet3/train_raw_dnn.py:172 - train - INFO ] Arguments for the experiment
+{'backstitch_training_interval': 1,
+ 'backstitch_training_scale': 0.0,
+ 'cleanup': True,
+ 'cmvn_opts': '--norm-means=false --norm-vars=false',
+ 'combine_sum_to_one_penalty': 0.0,
+ 'command': 'run.pl --mem 4G',
+ 'compute_average_posteriors': False,
+ 'compute_per_dim_accuracy': False,
+ 'dir': 'exp/nnet3/multitask_accentOutputAt5_0.4_0.6',
+ 'do_final_combination': True,
+ 'dropout_schedule': None,
+ 'egs_command': None,
+ 'egs_dir': 'exp/nnet3/multitask_accentOutputAt5_0.4_0.6/egs',
+ 'egs_opts': None,
+ 'egs_stage': 0,
+ 'email': None,
+ 'exit_stage': None,
+ 'feat_dir': 'data/101-recognition/cv_train_nz_sp_hires',
+ 'final_effective_lrate': 0.00015,
+ 'frames_per_eg': 8,
+ 'image_augmentation_opts': None,
+ 'initial_effective_lrate': 0.0015,
+ 'max_lda_jobs': 10,
+ 'max_models_combine': 20,
+ 'max_param_change': 2.0,
+ 'minibatch_size': '256,128',
+ 'momentum': 0.0,
+ 'nj': 4,
+ 'num_epochs': 2.0,
+ 'num_jobs_compute_prior': 10,
+ 'num_jobs_final': 8,
+ 'num_jobs_initial': 2,
+ 'online_ivector_dir': 'exp/101-recognition/nnet3/ivectors_cv_train_nz_sp',
+ 'preserve_model_interval': 50,
+ 'presoftmax_prior_scale_power': -0.25,
+ 'prior_subset_size': 20000,
+ 'proportional_shrink': 0.0,
+ 'rand_prune': 4.0,
+ 'remove_egs': False,
+ 'reporting_interval': 0.1,
+ 'samples_per_iter': 400000,
+ 'shuffle_buffer_size': 5000,
+ 'srand': 0,
+ 'stage': 55,
+ 'targets_scp': 'exp/101-recognition/tri4_cv_train_nz_ali',
+ 'transform_dir': None,
+ 'use_dense_targets': False,
+ 'use_gpu': True}
+2018-02-15 16:58:36,132 [steps/nnet3/train_raw_dnn.py:322 - train - INFO ] Training will run for 2.0 epochs = 70 iterations
+2018-02-15 16:58:36,133 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 55)
+2018-02-15 16:58:36,138 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 55, learning rate is 0.00222789051494.
+run.pl: job failed, log is in exp/nnet3/multitask_accentOutputAt5_0.4_0.6/log/train.55.7.log
+2018-02-15 16:59:31,651 [steps/libs/common.py:231 - background_command_waiter - ERROR ] Command exited with status 1: run.pl --mem 4G --gpu 1 exp/nnet3/multitask_accentOutputAt5_0.4_0.6/log/train.55.7.log                     nnet3-train  --read-cache=exp/nnet3/multitask_accentOutputAt5_0.4_0.6/cache.55                       --print-interval=10                     --momentum=0.0                     --max-param-change=2.0                     --backstitch-training-scale=0.0                     --l2-regularize-factor=0.142857142857                     --backstitch-training-interval=1                     --srand=55                      "nnet3-copy --learning-rate=0.00222789051494 --scale=1.0 exp/nnet3/multitask_accentOutputAt5_0.4_0.6/55.raw - |" "ark,bg:nnet3-copy-egs --frame=5 --outputs=ark:exp/nnet3/multitask_accentOutputAt5_0.4_0.6/egs/egs.output.2.ark --weights=ark:exp/nnet3/multitask_accentOutputAt5_0.4_0.6/egs/egs.weight.2.ark             scp:exp/nnet3/multitask_accentOutputAt5_0.4_0.6/egs/egs.2.scp ark:- |             nnet3-shuffle-egs --buffer-size=5000             --srand=55 ark:- ark:- |              nnet3-merge-egs --minibatch-size=256,128 ark:- ark:- |"                     exp/nnet3/multitask_accentOutputAt5_0.4_0.6/56.7.raw
+steps/nnet3/train_raw_dnn.py --stage=55 --cmd=run.pl --mem 4G --feat.cmvn-opts=--norm-means=false --norm-vars=false --trainer.num-epochs 2 --trainer.optimization.num-jobs-initial=2 --trainer.optimization.num-jobs-final=8 --trainer.optimization.initial-effective-lrate=0.0015 --trainer.optimization.final-effective-lrate=0.00015 --trainer.optimization.minibatch-size=256,128 --trainer.samples-per-iter=400000 --trainer.max-param-change=2.0 --trainer.srand=0 --feat-dir data/101-recognition/cv_train_nz_sp_hires --feat.online-ivector-dir exp/101-recognition/nnet3/ivectors_cv_train_nz_sp --egs.dir exp/nnet3/multitask_accentOutputAt5_0.4_0.6/egs --use-dense-targets false --targets-scp exp/101-recognition/tri4_cv_train_nz_ali --cleanup.remove-egs false --cleanup.preserve-model-interval 50 --use-gpu true --dir=exp/nnet3/multitask_accentOutputAt5_0.4_0.6
+['steps/nnet3/train_raw_dnn.py', '--stage=55', '--cmd=run.pl --mem 4G', '--feat.cmvn-opts=--norm-means=false --norm-vars=false', '--trainer.num-epochs', '2', '--trainer.optimization.num-jobs-initial=2', '--trainer.optimization.num-jobs-final=8', '--trainer.optimization.initial-effective-lrate=0.0015', '--trainer.optimization.final-effective-lrate=0.00015', '--trainer.optimization.minibatch-size=256,128', '--trainer.samples-per-iter=400000', '--trainer.max-param-change=2.0', '--trainer.srand=0', '--feat-dir', 'data/101-recognition/cv_train_nz_sp_hires', '--feat.online-ivector-dir', 'exp/101-recognition/nnet3/ivectors_cv_train_nz_sp', '--egs.dir', 'exp/nnet3/multitask_accentOutputAt5_0.4_0.6/egs', '--use-dense-targets', 'false', '--targets-scp', 'exp/101-recognition/tri4_cv_train_nz_ali', '--cleanup.remove-egs', 'false', '--cleanup.preserve-model-interval', '50', '--use-gpu', 'true', '--dir=exp/nnet3/multitask_accentOutputAt5_0.4_0.6']

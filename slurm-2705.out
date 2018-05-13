@@ -1,0 +1,11 @@
+steps/nnet3/xconfig_to_configs.py --xconfig-file exp/nnet3_separate_accents/multitask_separate_accents_0.12_0.12_0.12_0.14_0.14_0.14_0.22_nz/configs/network.xconfig --config-dir exp/nnet3_separate_accents/multitask_separate_accents_0.12_0.12_0.12_0.14_0.14_0.14_0.22_nz/configs/ --nnet-edits=rename-node old-name=output-0 new-name=output
+nnet3-init exp/nnet3_separate_accents/multitask_separate_accents_0.12_0.12_0.12_0.14_0.14_0.14_0.22_nz/configs//ref.config exp/nnet3_separate_accents/multitask_separate_accents_0.12_0.12_0.12_0.14_0.14_0.14_0.22_nz/configs//ref.raw 
+LOG (nnet3-init[5.2.204~1-08848]:main():nnet3-init.cc:80) Initialized raw neural net and wrote it to exp/nnet3_separate_accents/multitask_separate_accents_0.12_0.12_0.12_0.14_0.14_0.14_0.22_nz/configs//ref.raw
+nnet3-info "nnet3-copy --edits='rename-node old-name=output-0 new-name=output' exp/nnet3_separate_accents/multitask_separate_accents_0.12_0.12_0.12_0.14_0.14_0.14_0.22_nz/configs//ref.raw - |" 
+nnet3-copy '--edits=rename-node old-name=output-0 new-name=output' exp/nnet3_separate_accents/multitask_separate_accents_0.12_0.12_0.12_0.14_0.14_0.14_0.22_nz/configs//ref.raw - 
+LOG (nnet3-copy[5.2.204~1-08848]:main():nnet3-copy.cc:114) Copied raw neural net from exp/nnet3_separate_accents/multitask_separate_accents_0.12_0.12_0.12_0.14_0.14_0.14_0.22_nz/configs//ref.raw to -
+nnet3-init exp/nnet3_separate_accents/multitask_separate_accents_0.12_0.12_0.12_0.14_0.14_0.14_0.22_nz/configs//ref.config exp/nnet3_separate_accents/multitask_separate_accents_0.12_0.12_0.12_0.14_0.14_0.14_0.22_nz/configs//ref.raw 
+LOG (nnet3-init[5.2.204~1-08848]:main():nnet3-init.cc:80) Initialized raw neural net and wrote it to exp/nnet3_separate_accents/multitask_separate_accents_0.12_0.12_0.12_0.14_0.14_0.14_0.22_nz/configs//ref.raw
+nnet3-info "nnet3-copy --edits='rename-node old-name=output-0 new-name=output' exp/nnet3_separate_accents/multitask_separate_accents_0.12_0.12_0.12_0.14_0.14_0.14_0.22_nz/configs//ref.raw - |" 
+nnet3-copy '--edits=rename-node old-name=output-0 new-name=output' exp/nnet3_separate_accents/multitask_separate_accents_0.12_0.12_0.12_0.14_0.14_0.14_0.22_nz/configs//ref.raw - 
+LOG (nnet3-copy[5.2.204~1-08848]:main():nnet3-copy.cc:114) Copied raw neural net from exp/nnet3_separate_accents/multitask_separate_accents_0.12_0.12_0.12_0.14_0.14_0.14_0.22_nz/configs//ref.raw to -

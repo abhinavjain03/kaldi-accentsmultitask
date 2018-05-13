@@ -1,0 +1,157 @@
+2018-03-21 14:38:51,829 [steps/nnet3/train_raw_dnn.py:34 - <module> - INFO ] Starting raw DNN trainer (train_raw_dnn.py)
+2018-03-21 14:38:51,855 [steps/nnet3/train_raw_dnn.py:172 - train - INFO ] Arguments for the experiment
+{'backstitch_training_interval': 1,
+ 'backstitch_training_scale': 0.0,
+ 'cleanup': True,
+ 'cmvn_opts': '--norm-means=false --norm-vars=false',
+ 'combine_sum_to_one_penalty': 0.0,
+ 'command': 'run.pl --mem 4G',
+ 'compute_average_posteriors': False,
+ 'compute_per_dim_accuracy': False,
+ 'dir': 'scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput',
+ 'do_final_combination': True,
+ 'dropout_schedule': None,
+ 'egs_command': None,
+ 'egs_dir': 'scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput/egs',
+ 'egs_opts': None,
+ 'egs_stage': 0,
+ 'email': None,
+ 'exit_stage': None,
+ 'feat_dir': 'data/101-recog-min/cv_train_nz_mfcc_bnf_appended_sp',
+ 'final_effective_lrate': 0.00015,
+ 'frames_per_eg': 8,
+ 'image_augmentation_opts': None,
+ 'initial_effective_lrate': 0.0015,
+ 'max_lda_jobs': 10,
+ 'max_models_combine': 20,
+ 'max_param_change': 2.0,
+ 'minibatch_size': '256,128',
+ 'momentum': 0.0,
+ 'nj': 4,
+ 'num_epochs': 2.0,
+ 'num_jobs_compute_prior': 10,
+ 'num_jobs_final': 8,
+ 'num_jobs_initial': 2,
+ 'online_ivector_dir': 'exp/101-recog-min/nnet3/ivectors_cv_train_nz_sp',
+ 'preserve_model_interval': 50,
+ 'presoftmax_prior_scale_power': -0.25,
+ 'prior_subset_size': 20000,
+ 'proportional_shrink': 10.0,
+ 'rand_prune': 4.0,
+ 'remove_egs': False,
+ 'reporting_interval': 0.1,
+ 'samples_per_iter': 400000,
+ 'shuffle_buffer_size': 5000,
+ 'srand': 0,
+ 'stage': -10,
+ 'targets_scp': 'exp/101-recog-min/tri4_cv_train_nz_ali',
+ 'transform_dir': None,
+ 'use_dense_targets': False,
+ 'use_gpu': True}
+2018-03-21 14:38:52,483 [steps/nnet3/train_raw_dnn.py:283 - train - INFO ] Preparing the initial network.
+2018-03-21 14:38:54,565 [steps/nnet3/train_raw_dnn.py:322 - train - INFO ] Training will run for 2.0 epochs = 73 iterations
+2018-03-21 14:38:54,565 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 0)
+2018-03-21 14:38:54,570 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 0, learning rate is 0.003 and shrink value is 0.97.
+2018-03-21 14:46:13,484 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 1)
+2018-03-21 14:46:13,490 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 1, learning rate is 0.00296269177709 and shrink value is 0.970373082229.
+2018-03-21 14:51:43,416 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 2)
+2018-03-21 14:51:43,421 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 2, learning rate is 0.00292584752202 and shrink value is 0.97074152478.
+2018-03-21 14:57:02,384 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 3)
+2018-03-21 14:57:02,397 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 3, learning rate is 0.00288946146484 and shrink value is 0.971105385352.
+2018-03-21 15:02:33,318 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 4)
+2018-03-21 15:02:33,323 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 4, learning rate is 0.00285352790737 and shrink value is 0.971464720926.
+2018-03-21 15:08:08,781 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 5)
+2018-03-21 15:08:08,796 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 5, learning rate is 0.00281804122229 and shrink value is 0.971819587777.
+2018-03-21 15:13:49,864 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 6)
+2018-03-21 15:13:49,871 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 6, learning rate is 0.00278299585226 and shrink value is 0.972170041477.
+2018-03-21 15:19:21,647 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 7)
+2018-03-21 15:19:21,654 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 7, learning rate is 0.00412257946358 and shrink value is 0.958774205364.
+2018-03-21 15:25:17,741 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 8)
+2018-03-21 15:25:17,749 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 8, learning rate is 0.00404591599771 and shrink value is 0.959540840023.
+2018-03-21 15:31:34,736 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 9)
+2018-03-21 15:31:34,743 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 9, learning rate is 0.00397067816525 and shrink value is 0.960293218347.
+2018-03-21 15:38:14,010 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 10)
+2018-03-21 15:38:14,017 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 10, learning rate is 0.00389683945512 and shrink value is 0.961031605449.
+2018-03-21 15:44:35,660 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 11)
+2018-03-21 15:44:35,666 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 11, learning rate is 0.00382437384925 and shrink value is 0.961756261507.
+2018-03-21 15:50:54,088 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 12)
+2018-03-21 15:50:54,095 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 12, learning rate is 0.00375325581341 and shrink value is 0.962467441866.
+2018-03-21 15:57:04,691 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 13)
+2018-03-21 15:57:04,697 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 13, learning rate is 0.00368346028818 and shrink value is 0.963165397118.
+2018-03-21 16:03:18,280 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 14)
+2018-03-21 16:03:18,287 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 14, learning rate is 0.00361496268017 and shrink value is 0.963850373198.
+2018-03-21 16:09:11,304 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 15)
+2018-03-21 16:09:11,311 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 15, learning rate is 0.00354773885332 and shrink value is 0.964522611467.
+2018-03-21 16:15:02,353 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 16)
+2018-03-21 16:15:02,366 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 16, learning rate is 0.00348176512039 and shrink value is 0.965182348796.
+2018-03-21 16:21:16,922 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 17)
+2018-03-21 16:21:16,932 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 17, learning rate is 0.00341701823465 and shrink value is 0.965829817653.
+2018-03-21 16:28:31,221 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 18)
+2018-03-21 16:28:31,228 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 18, learning rate is 0.00335347538166 and shrink value is 0.966465246183.
+2018-03-21 16:34:24,690 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 19)
+2018-03-21 16:34:24,698 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 19, learning rate is 0.0043881522283 and shrink value is 0.956118477717.
+2018-03-21 16:40:42,764 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 20)
+2018-03-21 16:40:42,777 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 20, learning rate is 0.0042796881078 and shrink value is 0.957203118922.
+2018-03-21 16:47:50,131 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 21)
+2018-03-21 16:47:50,141 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 21, learning rate is 0.00417390494841 and shrink value is 0.958260950516.
+2018-03-21 16:53:56,316 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 22)
+2018-03-21 16:53:56,326 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 22, learning rate is 0.00407073648348 and shrink value is 0.959292635165.
+2018-03-21 16:59:27,061 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 23)
+2018-03-21 16:59:27,072 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 23, learning rate is 0.00397011808433 and shrink value is 0.960298819157.
+2018-03-21 17:04:57,984 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 24)
+2018-03-21 17:04:57,994 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 24, learning rate is 0.00387198671971 and shrink value is 0.961280132803.
+2018-03-21 17:10:42,039 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 25)
+2018-03-21 17:10:42,051 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 25, learning rate is 0.00377628091639 and shrink value is 0.962237190836.
+2018-03-21 17:16:21,771 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 26)
+2018-03-21 17:16:21,784 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 26, learning rate is 0.00368294072055 and shrink value is 0.963170592794.
+2018-03-21 17:22:02,086 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 27)
+2018-03-21 17:22:02,095 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 27, learning rate is 0.00359190766032 and shrink value is 0.964080923397.
+2018-03-21 17:27:17,842 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 28)
+2018-03-21 17:27:17,852 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 28, learning rate is 0.00350312470909 and shrink value is 0.964968752909.
+2018-03-21 17:33:10,682 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 29)
+2018-03-21 17:33:10,704 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 29, learning rate is 0.0034165362498 and shrink value is 0.965834637502.
+2018-03-21 17:40:01,768 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 30)
+2018-03-21 17:40:01,774 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 30, learning rate is 0.00333208804012 and shrink value is 0.966679119599.
+2018-03-21 17:46:48,854 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 31)
+2018-03-21 17:46:48,866 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 31, learning rate is 0.00406215897306 and shrink value is 0.959378410269.
+2018-03-21 17:54:41,607 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 32)
+2018-03-21 17:54:41,614 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 32, learning rate is 0.00393704119514 and shrink value is 0.960629588049.
+2018-03-21 18:02:21,183 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 33)
+2018-03-21 18:02:21,194 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 33, learning rate is 0.00381577714585 and shrink value is 0.961842228542.
+2018-03-21 18:09:51,103 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 34)
+2018-03-21 18:09:51,110 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 34, learning rate is 0.00369824812724 and shrink value is 0.963017518728.
+2018-03-21 18:17:33,329 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 35)
+2018-03-21 18:17:33,336 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 35, learning rate is 0.00358433909735 and shrink value is 0.964156609026.
+2018-03-21 18:25:22,948 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 36)
+2018-03-21 18:25:22,957 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 36, learning rate is 0.0034739385576 and shrink value is 0.965260614424.
+2018-03-21 18:33:16,076 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 37)
+2018-03-21 18:33:16,084 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 37, learning rate is 0.00336693844366 and shrink value is 0.966330615563.
+2018-03-21 18:40:56,373 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 38)
+2018-03-21 18:40:56,387 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 38, learning rate is 0.00326323401967 and shrink value is 0.967367659803.
+2018-03-21 18:48:23,661 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 39)
+2018-03-21 18:48:23,667 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 39, learning rate is 0.00316272377571 and shrink value is 0.968372762243.
+2018-03-21 18:56:19,742 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 40)
+2018-03-21 18:56:19,748 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 40, learning rate is 0.00306530932847 and shrink value is 0.969346906715.
+2018-03-21 19:06:01,253 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 41)
+2018-03-21 19:06:01,265 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 41, learning rate is 0.00297089532489 and shrink value is 0.970291046751.
+2018-03-21 19:13:51,005 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 42)
+2018-03-21 19:13:51,014 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 42, learning rate is 0.00287938934889 and shrink value is 0.971206106511.
+2018-03-21 19:21:35,582 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 43)
+2018-03-21 19:21:35,591 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 43, learning rate is 0.00334884219705 and shrink value is 0.966511578029.
+2018-03-21 19:31:06,977 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 44)
+2018-03-21 19:31:06,986 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 44, learning rate is 0.00322545016007 and shrink value is 0.967745498399.
+2018-03-21 19:40:48,144 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 45)
+2018-03-21 19:40:48,151 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 45, learning rate is 0.00310660464809 and shrink value is 0.968933953519.
+2018-03-21 19:50:14,367 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 46)
+2018-03-21 19:50:14,374 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 46, learning rate is 0.00299213813904 and shrink value is 0.97007861861.
+2018-03-21 19:59:23,223 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 47)
+2018-03-21 19:59:23,233 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 47, learning rate is 0.00288188928341 and shrink value is 0.971181107166.
+2018-03-21 20:08:42,062 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 48)
+2018-03-21 20:08:42,070 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 48, learning rate is 0.00277570267678 and shrink value is 0.972242973232.
+2018-03-21 20:18:46,114 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 49)
+2018-03-21 20:18:46,126 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 49, learning rate is 0.0026734286408 and shrink value is 0.973265713592.
+2018-03-21 20:27:49,327 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 50)
+2018-03-21 20:27:49,336 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 50, learning rate is 0.00257492301219 and shrink value is 0.974250769878.
+2018-03-21 20:36:46,137 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 51)
+2018-03-21 20:36:46,146 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 51, learning rate is 0.00248004693955 and shrink value is 0.975199530604.
+slurmstepd: *** JOB 3116 ON dhvani CANCELLED AT 2018-03-21T20:39:04 DUE TO TIME LIMIT ***

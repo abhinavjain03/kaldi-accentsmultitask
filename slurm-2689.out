@@ -1,0 +1,69 @@
+2018-03-13 14:19:26,795 [steps/nnet3/train_raw_dnn.py:34 - <module> - INFO ] Starting raw DNN trainer (train_raw_dnn.py)
+2018-03-13 14:19:26,803 [steps/nnet3/train_raw_dnn.py:172 - train - INFO ] Arguments for the experiment
+{'backstitch_training_interval': 1,
+ 'backstitch_training_scale': 0.0,
+ 'cleanup': True,
+ 'cmvn_opts': '--norm-means=false --norm-vars=false',
+ 'combine_sum_to_one_penalty': 0.0,
+ 'command': 'run.pl --mem 4G',
+ 'compute_average_posteriors': False,
+ 'compute_per_dim_accuracy': False,
+ 'dir': 'exp/nnet3_separate_accents/multitask_separate_accents_0.14_nz',
+ 'do_final_combination': True,
+ 'dropout_schedule': None,
+ 'egs_command': None,
+ 'egs_dir': 'exp/nnet3_separate_accents/multitask_separate_accents_0.14_nz/egs',
+ 'egs_opts': None,
+ 'egs_stage': 0,
+ 'email': None,
+ 'exit_stage': None,
+ 'feat_dir': 'data/101/train_sp_hires',
+ 'final_effective_lrate': 0.00015,
+ 'frames_per_eg': 8,
+ 'image_augmentation_opts': None,
+ 'initial_effective_lrate': 0.0015,
+ 'max_lda_jobs': 10,
+ 'max_models_combine': 20,
+ 'max_param_change': 2.0,
+ 'minibatch_size': '256,128',
+ 'momentum': 0.0,
+ 'nj': 4,
+ 'num_epochs': 2.0,
+ 'num_jobs_compute_prior': 10,
+ 'num_jobs_final': 4,
+ 'num_jobs_initial': 4,
+ 'online_ivector_dir': 'exp/101/ivectors_train_sp',
+ 'preserve_model_interval': 50,
+ 'presoftmax_prior_scale_power': -0.25,
+ 'prior_subset_size': 20000,
+ 'proportional_shrink': 0.0,
+ 'rand_prune': 4.0,
+ 'remove_egs': False,
+ 'reporting_interval': 0.1,
+ 'samples_per_iter': 400000,
+ 'shuffle_buffer_size': 5000,
+ 'srand': 0,
+ 'stage': 38,
+ 'targets_scp': 'exp/101/ali',
+ 'transform_dir': None,
+ 'use_dense_targets': False,
+ 'use_gpu': True}
+2018-03-13 14:19:26,857 [steps/nnet3/train_raw_dnn.py:322 - train - INFO ] Training will run for 2.0 epochs = 44 iterations
+2018-03-13 14:19:26,857 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 38)
+2018-03-13 14:19:26,865 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 38, learning rate is 0.000821324705722.
+2018-03-13 14:23:17,936 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 39)
+2018-03-13 14:23:17,942 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 39, learning rate is 0.000779448838144.
+2018-03-13 14:28:21,866 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 40)
+2018-03-13 14:28:21,872 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 40, learning rate is 0.000739708043665.
+2018-03-13 14:33:43,545 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 41)
+2018-03-13 14:33:43,555 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 41, learning rate is 0.000701993463953.
+2018-03-13 14:37:22,587 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 42)
+2018-03-13 14:37:22,597 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 42, learning rate is 0.000666201790901.
+2018-03-13 14:41:36,701 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 43)
+2018-03-13 14:41:36,801 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 43, learning rate is 0.0006.
+2018-03-13 14:45:11,023 [steps/nnet3/train_raw_dnn.py:395 - train - INFO ] Doing final combination to produce final.raw
+2018-03-13 14:45:11,024 [steps/libs/nnet3/train/frame_level_objf/common.py:466 - combine_models - INFO ] Combining set([32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 25, 26, 27, 28, 29, 30, 31]) models.
+2018-03-13 15:07:46,054 [steps/nnet3/train_raw_dnn.py:417 - train - INFO ] Cleaning up the experiment directory exp/nnet3_separate_accents/multitask_separate_accents_0.14_nz
+exp/nnet3_separate_accents/multitask_separate_accents_0.14_nz: num-iters=44 nj=4..4 num-params=83.1M combine=-2.87->-2.75
+steps/nnet3/train_raw_dnn.py --stage=38 --cmd=run.pl --mem 4G --feat.cmvn-opts=--norm-means=false --norm-vars=false --trainer.num-epochs 2 --trainer.optimization.num-jobs-initial=4 --trainer.optimization.num-jobs-final=4 --trainer.optimization.initial-effective-lrate=0.0015 --trainer.optimization.final-effective-lrate=0.00015 --trainer.optimization.minibatch-size=256,128 --trainer.samples-per-iter=400000 --trainer.max-param-change=2.0 --trainer.srand=0 --feat-dir data/101/train_sp_hires --feat.online-ivector-dir exp/101/ivectors_train_sp --egs.dir exp/nnet3_separate_accents/multitask_separate_accents_0.14_nz/egs --use-dense-targets false --targets-scp exp/101/ali --cleanup.remove-egs false --cleanup.preserve-model-interval 50 --use-gpu true --dir=exp/nnet3_separate_accents/multitask_separate_accents_0.14_nz
+['steps/nnet3/train_raw_dnn.py', '--stage=38', '--cmd=run.pl --mem 4G', '--feat.cmvn-opts=--norm-means=false --norm-vars=false', '--trainer.num-epochs', '2', '--trainer.optimization.num-jobs-initial=4', '--trainer.optimization.num-jobs-final=4', '--trainer.optimization.initial-effective-lrate=0.0015', '--trainer.optimization.final-effective-lrate=0.00015', '--trainer.optimization.minibatch-size=256,128', '--trainer.samples-per-iter=400000', '--trainer.max-param-change=2.0', '--trainer.srand=0', '--feat-dir', 'data/101/train_sp_hires', '--feat.online-ivector-dir', 'exp/101/ivectors_train_sp', '--egs.dir', 'exp/nnet3_separate_accents/multitask_separate_accents_0.14_nz/egs', '--use-dense-targets', 'false', '--targets-scp', 'exp/101/ali', '--cleanup.remove-egs', 'false', '--cleanup.preserve-model-interval', '50', '--use-gpu', 'true', '--dir=exp/nnet3_separate_accents/multitask_separate_accents_0.14_nz']

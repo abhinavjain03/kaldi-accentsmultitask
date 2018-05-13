@@ -1,0 +1,189 @@
+steps/nnet3/xconfig_to_configs.py --xconfig-file exp/nnet3/multitask_bottleneck_300_0.5_0.5/configs/network.xconfig --config-dir exp/nnet3/multitask_bottleneck_300_0.5_0.5/configs/ --nnet-edits=rename-node old-name=output-0 new-name=output
+nnet3-init exp/nnet3/multitask_bottleneck_300_0.5_0.5/configs//ref.config exp/nnet3/multitask_bottleneck_300_0.5_0.5/configs//ref.raw 
+LOG (nnet3-init[5.2.204~1-08848]:main():nnet3-init.cc:80) Initialized raw neural net and wrote it to exp/nnet3/multitask_bottleneck_300_0.5_0.5/configs//ref.raw
+nnet3-info "nnet3-copy --edits='rename-node old-name=output-0 new-name=output' exp/nnet3/multitask_bottleneck_300_0.5_0.5/configs//ref.raw - |" 
+nnet3-copy '--edits=rename-node old-name=output-0 new-name=output' exp/nnet3/multitask_bottleneck_300_0.5_0.5/configs//ref.raw - 
+LOG (nnet3-copy[5.2.204~1-08848]:main():nnet3-copy.cc:114) Copied raw neural net from exp/nnet3/multitask_bottleneck_300_0.5_0.5/configs//ref.raw to -
+nnet3-init exp/nnet3/multitask_bottleneck_300_0.5_0.5/configs//ref.config exp/nnet3/multitask_bottleneck_300_0.5_0.5/configs//ref.raw 
+LOG (nnet3-init[5.2.204~1-08848]:main():nnet3-init.cc:80) Initialized raw neural net and wrote it to exp/nnet3/multitask_bottleneck_300_0.5_0.5/configs//ref.raw
+nnet3-info "nnet3-copy --edits='rename-node old-name=output-0 new-name=output' exp/nnet3/multitask_bottleneck_300_0.5_0.5/configs//ref.raw - |" 
+nnet3-copy '--edits=rename-node old-name=output-0 new-name=output' exp/nnet3/multitask_bottleneck_300_0.5_0.5/configs//ref.raw - 
+LOG (nnet3-copy[5.2.204~1-08848]:main():nnet3-copy.cc:114) Copied raw neural net from exp/nnet3/multitask_bottleneck_300_0.5_0.5/configs//ref.raw to -
+./run.sh: calling get_egs.sh for generating examples with alignments as output
+steps/nnet3/get_egs.sh --cmvn-opts --norm-means=false --norm-vars=false --online-ivector-dir exp/101-recognition/nnet3/ivectors_cv_train_nz_sp --transform-dir exp/101-recognition/tri4_cv_train_nz_ali --left-context 16 --right-context 12 --num-utts-subset 300 --nj 30 --samples-per-iter 400000 --cmd run.pl --generate-egs-scp true --frames-per-eg 8 data/101-recognition/cv_train_nz_sp_hires exp/101-recognition/tri4_cv_train_nz_ali exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs_aligns
+File data/101-recognition/cv_train_nz_sp_hires/utt2uniq exists, so augmenting valid_uttlist to
+include all perturbed versions of the same 'real' utterances.
+steps/nnet3/get_egs.sh: feature type is raw
+feat-to-dim scp:exp/101-recognition/nnet3/ivectors_cv_train_nz_sp/ivector_online.scp - 
+steps/nnet3/get_egs.sh: working out number of frames of training data
+steps/nnet3/get_egs.sh: working out feature dim
+steps/nnet3/get_egs.sh: creating 12 archives, each with 387321 egs, with
+steps/nnet3/get_egs.sh:   8 labels per example, and (left,right) context = (16,12)
+steps/nnet3/get_egs.sh: copying data alignments
+copy-int-vector ark:- ark,scp:exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs_aligns/ali.ark,exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs_aligns/ali.scp 
+LOG (copy-int-vector[5.2.204~1-08848]:main():copy-int-vector.cc:83) Copied 92660 vectors of int32.
+steps/nnet3/get_egs.sh: Getting validation and training subset examples.
+steps/nnet3/get_egs.sh: ... extracting validation and training-subset alignments.
+... Getting subsets of validation examples for diagnostics and combination.
+nnet3-copy-egs ark:- ark,scp:exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs_aligns/combine.egs,exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs_aligns/combine.scp 
+LOG (nnet3-copy-egs[5.2.204~1-08848]:main():nnet3-copy-egs.cc:436) Read 7500 neural-network training examples, wrote 7500, 0 examples had errors.
+rm: cannot remove 'exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs_aligns/train_combine.scp': No such file or directory
+rm: cannot remove 'exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs_aligns/valid_combine.scp': No such file or directory
+steps/nnet3/get_egs.sh: Generating training examples on disk
+steps/nnet3/get_egs.sh: recombining and shuffling order of archives on disk
+steps/nnet3/get_egs.sh: removing temporary archives
+steps/nnet3/get_egs.sh: removing temporary alignments and transforms
+steps/nnet3/get_egs.sh: Finished preparing training examples
+./run.sh: calling get_egs.sh for generating examples with alignments as output
+steps/nnet3/get_egs_mod.sh --cmvn-opts --norm-means=false --norm-vars=false --online-ivector-dir exp/102-class/nnet3/ivectors_cv_trainx_nz_sp --transform-dir exp/102-class/ali --left-context 16 --right-context 12 --num-utts-subset 300 --nj 30 --num-pdfs 16 --samples-per-iter 400000 --cmd run.pl --generate-egs-scp true --frames-per-eg 8 data/102-class/cv_trainx_nz_sp_hires exp/102-class/ali exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs_accents
+File data/102-class/cv_trainx_nz_sp_hires/utt2uniq exists, so augmenting valid_uttlist to
+include all perturbed versions of the same 'real' utterances.
+steps/nnet3/get_egs_mod.sh: feature type is raw
+feat-to-dim scp:exp/102-class/nnet3/ivectors_cv_trainx_nz_sp/ivector_online.scp - 
+steps/nnet3/get_egs_mod.sh: working out number of frames of training data
+steps/nnet3/get_egs_mod.sh: working out feature dim
+steps/nnet3/get_egs_mod.sh: creating 12 archives, each with 387321 egs, with
+steps/nnet3/get_egs_mod.sh:   8 labels per example, and (left,right) context = (16,12)
+steps/nnet3/get_egs_mod.sh: copying data alignments
+copy-int-vector ark:- ark,scp:exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs_accents/ali.ark,exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs_accents/ali.scp 
+LOG (copy-int-vector[5.2.204~1-08848]:main():copy-int-vector.cc:83) Copied 92660 vectors of int32.
+steps/nnet3/get_egs_mod.sh: Getting validation and training subset examples.
+steps/nnet3/get_egs_mod.sh: ... extracting validation and training-subset alignments.
+... Getting subsets of validation examples for diagnostics and combination.
+nnet3-copy-egs ark:- ark,scp:exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs_accents/combine.egs,exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs_accents/combine.scp 
+LOG (nnet3-copy-egs[5.2.204~1-08848]:main():nnet3-copy-egs.cc:436) Read 7500 neural-network training examples, wrote 7500, 0 examples had errors.
+rm: cannot remove 'exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs_accents/train_combine.scp': No such file or directory
+rm: cannot remove 'exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs_accents/valid_combine.scp': No such file or directory
+steps/nnet3/get_egs_mod.sh: Generating training examples on disk
+steps/nnet3/get_egs_mod.sh: recombining and shuffling order of archives on disk
+steps/nnet3/get_egs_mod.sh: removing temporary archives
+steps/nnet3/get_egs_mod.sh: removing temporary alignments and transforms
+steps/nnet3/get_egs_mod.sh: Finished preparing training examples
+steps/nnet3/multilingual/combine_egs.sh --lang2weight '0.5,0.5' --cmd run.pl --mem 4G --samples-per-iter 400000 2 exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs_aligns exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs_accents exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs
+steps/nnet3/multilingual/combine_egs.sh: allocating multilingual examples for training.
+steps/nnet3/multilingual/combine_egs.sh: combine combine.scp examples from all langs in exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs/combine.scp.
+steps/nnet3/multilingual/combine_egs.sh: combine train_diagnostic.scp examples from all langs in exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs/train_diagnostic.scp.
+steps/nnet3/multilingual/combine_egs.sh: combine valid_diagnostic.scp examples from all langs in exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs/valid_diagnostic.scp.
+steps/nnet3/multilingual/combine_egs.sh: Finished preparing multilingual training example.
+2018-02-08 19:48:01,764 [steps/nnet3/train_raw_dnn.py:34 - <module> - INFO ] Starting raw DNN trainer (train_raw_dnn.py)
+2018-02-08 19:48:01,772 [steps/nnet3/train_raw_dnn.py:172 - train - INFO ] Arguments for the experiment
+{'backstitch_training_interval': 1,
+ 'backstitch_training_scale': 0.0,
+ 'cleanup': True,
+ 'cmvn_opts': '--norm-means=false --norm-vars=false',
+ 'combine_sum_to_one_penalty': 0.0,
+ 'command': 'run.pl --mem 4G',
+ 'compute_average_posteriors': False,
+ 'compute_per_dim_accuracy': False,
+ 'dir': 'exp/nnet3/multitask_bottleneck_300_0.5_0.5',
+ 'do_final_combination': True,
+ 'dropout_schedule': None,
+ 'egs_command': None,
+ 'egs_dir': 'exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs',
+ 'egs_opts': None,
+ 'egs_stage': 0,
+ 'email': None,
+ 'exit_stage': None,
+ 'feat_dir': 'data/101-recognition/cv_train_nz_sp_hires',
+ 'final_effective_lrate': 0.00015,
+ 'frames_per_eg': 8,
+ 'image_augmentation_opts': None,
+ 'initial_effective_lrate': 0.0015,
+ 'max_lda_jobs': 10,
+ 'max_models_combine': 20,
+ 'max_param_change': 2.0,
+ 'minibatch_size': '256,128',
+ 'momentum': 0.0,
+ 'nj': 4,
+ 'num_epochs': 2.0,
+ 'num_jobs_compute_prior': 10,
+ 'num_jobs_final': 8,
+ 'num_jobs_initial': 2,
+ 'online_ivector_dir': 'exp/101-recognition/nnet3/ivectors_cv_train_nz_sp',
+ 'preserve_model_interval': 50,
+ 'presoftmax_prior_scale_power': -0.25,
+ 'prior_subset_size': 20000,
+ 'proportional_shrink': 0.0,
+ 'rand_prune': 4.0,
+ 'remove_egs': False,
+ 'reporting_interval': 0.1,
+ 'samples_per_iter': 400000,
+ 'shuffle_buffer_size': 5000,
+ 'srand': 0,
+ 'stage': -10,
+ 'targets_scp': 'exp/101-recognition/tri4_cv_train_nz_ali',
+ 'transform_dir': None,
+ 'use_dense_targets': False,
+ 'use_gpu': True}
+2018-02-08 19:48:01,794 [steps/nnet3/train_raw_dnn.py:283 - train - INFO ] Preparing the initial network.
+2018-02-08 19:48:03,604 [steps/nnet3/train_raw_dnn.py:322 - train - INFO ] Training will run for 2.0 epochs = 70 iterations
+2018-02-08 19:48:03,604 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 0)
+2018-02-08 19:48:03,608 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 0, learning rate is 0.003.
+2018-02-08 19:50:33,744 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 1)
+2018-02-08 19:50:33,767 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 1, learning rate is 0.0029610070167.
+2018-02-08 19:52:46,716 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 2)
+2018-02-08 19:52:46,722 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 2, learning rate is 0.00292252085097.
+2018-02-08 19:54:54,254 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 3)
+2018-02-08 19:54:54,262 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 3, learning rate is 0.00288453491539.
+2018-02-08 19:56:57,868 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 4)
+2018-02-08 19:56:57,879 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 4, learning rate is 0.00284704270813.
+2018-02-08 19:59:04,628 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 5)
+2018-02-08 19:59:04,689 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 5, learning rate is 0.00281003781187.
+2018-02-08 20:01:11,586 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 6)
+2018-02-08 20:01:11,619 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 6, learning rate is 0.00416027083906.
+2018-02-08 20:03:33,166 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 7)
+2018-02-08 20:03:33,194 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 7, learning rate is 0.00407942428943.
+2018-02-08 20:05:54,689 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 8)
+2018-02-08 20:05:54,728 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 8, learning rate is 0.00400014883092.
+2018-02-08 20:08:16,148 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 9)
+2018-02-08 20:08:16,156 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 9, learning rate is 0.00392241393252.
+2018-02-08 20:10:36,029 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 10)
+2018-02-08 20:10:36,050 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 10, learning rate is 0.00384618965652.
+2018-02-08 20:12:53,225 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 11)
+2018-02-08 20:12:53,339 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 11, learning rate is 0.00377144664699.
+2018-02-08 20:15:11,346 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 12)
+2018-02-08 20:15:11,370 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 12, learning rate is 0.00369815611848.
+2018-02-08 20:17:31,376 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 13)
+2018-02-08 20:17:31,429 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 13, learning rate is 0.00362628984493.
+2018-02-08 20:19:57,080 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 14)
+2018-02-08 20:19:57,118 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 14, learning rate is 0.00355582014878.
+2018-02-08 20:22:21,507 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 15)
+2018-02-08 20:22:21,515 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 15, learning rate is 0.00348671989034.
+2018-02-08 20:24:41,211 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 16)
+2018-02-08 20:24:41,248 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 16, learning rate is 0.00341896245733.
+2018-02-08 20:27:03,890 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 17)
+2018-02-08 20:27:03,916 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 17, learning rate is 0.00335252175463.
+2018-02-08 20:29:32,464 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 18)
+2018-02-08 20:29:32,475 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 18, learning rate is 0.0043831629256.
+2018-02-08 20:32:12,162 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 19)
+2018-02-08 20:32:12,171 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 19, learning rate is 0.00426996168109.
+2018-02-08 20:34:49,430 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 20)
+2018-02-08 20:34:49,463 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 20, learning rate is 0.00415968401529.
+2018-02-08 20:38:59,430 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 21)
+2018-02-08 20:38:59,457 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 21, learning rate is 0.00405225442271.
+2018-02-08 20:41:49,410 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 22)
+2018-02-08 20:41:49,490 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 22, learning rate is 0.00394759934795.
+2018-02-08 20:44:44,219 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 23)
+2018-02-08 20:44:44,271 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 23, learning rate is 0.00384564713522.
+2018-02-08 20:47:36,058 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 24)
+2018-02-08 20:47:36,090 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 24, learning rate is 0.00374632797939.
+2018-02-08 20:50:45,378 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 25)
+2018-02-08 20:50:45,442 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 25, learning rate is 0.00364957387812.
+2018-02-08 20:53:46,863 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 26)
+2018-02-08 20:53:46,870 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 26, learning rate is 0.00355531858533.
+2018-02-08 20:56:31,766 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 27)
+2018-02-08 20:56:31,865 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 27, learning rate is 0.00346349756583.
+2018-02-08 20:59:17,608 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 28)
+2018-02-08 20:59:17,654 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 28, learning rate is 0.00337404795114.
+2018-02-08 21:02:15,497 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 29)
+2018-02-08 21:02:15,554 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 29, learning rate is 0.00328690849647.
+2018-02-08 21:05:07,779 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 30)
+2018-02-08 21:05:07,788 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 30, learning rate is 0.0040025244234.
+run.pl: job failed, log is in exp/nnet3/multitask_bottleneck_300_0.5_0.5/log/train.30.3.log
+2018-02-08 21:05:32,943 [steps/libs/common.py:231 - background_command_waiter - ERROR ] Command exited with status 1: run.pl --mem 4G --gpu 1 exp/nnet3/multitask_bottleneck_300_0.5_0.5/log/train.30.3.log                     nnet3-train  --read-cache=exp/nnet3/multitask_bottleneck_300_0.5_0.5/cache.30                       --print-interval=10                     --momentum=0.0                     --max-param-change=2.0                     --backstitch-training-scale=0.0                     --l2-regularize-factor=0.2                     --backstitch-training-interval=1                     --srand=30                      "nnet3-copy --learning-rate=0.0040025244234 --scale=1.0 exp/nnet3/multitask_bottleneck_300_0.5_0.5/30.raw - |" "ark,bg:nnet3-copy-egs --frame=7 --outputs=ark:exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs/egs.output.11.ark --weights=ark:exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs/egs.weight.11.ark             scp:exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs/egs.11.scp ark:- |             nnet3-shuffle-egs --buffer-size=5000             --srand=30 ark:- ark:- |              nnet3-merge-egs --minibatch-size=256,128 ark:- ark:- |"                     exp/nnet3/multitask_bottleneck_300_0.5_0.5/31.3.raw
+run.pl: job failed, log is in exp/nnet3/multitask_bottleneck_300_0.5_0.5/log/train.30.2.log
+2018-02-08 21:05:35,016 [steps/libs/common.py:231 - background_command_waiter - ERROR ] Command exited with status 1: run.pl --mem 4G --gpu 1 exp/nnet3/multitask_bottleneck_300_0.5_0.5/log/train.30.2.log                     nnet3-train  --read-cache=exp/nnet3/multitask_bottleneck_300_0.5_0.5/cache.30                       --print-interval=10                     --momentum=0.0                     --max-param-change=2.0                     --backstitch-training-scale=0.0                     --l2-regularize-factor=0.2                     --backstitch-training-interval=1                     --srand=30                      "nnet3-copy --learning-rate=0.0040025244234 --scale=1.0 exp/nnet3/multitask_bottleneck_300_0.5_0.5/30.raw - |" "ark,bg:nnet3-copy-egs --frame=6 --outputs=ark:exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs/egs.output.10.ark --weights=ark:exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs/egs.weight.10.ark             scp:exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs/egs.10.scp ark:- |             nnet3-shuffle-egs --buffer-size=5000             --srand=30 ark:- ark:- |              nnet3-merge-egs --minibatch-size=256,128 ark:- ark:- |"                     exp/nnet3/multitask_bottleneck_300_0.5_0.5/31.2.raw
+run.pl: job failed, log is in exp/nnet3/multitask_bottleneck_300_0.5_0.5/log/train.30.4.log
+2018-02-08 21:05:35,024 [steps/libs/common.py:231 - background_command_waiter - ERROR ] Command exited with status 1: run.pl --mem 4G --gpu 1 exp/nnet3/multitask_bottleneck_300_0.5_0.5/log/train.30.4.log                     nnet3-train  --read-cache=exp/nnet3/multitask_bottleneck_300_0.5_0.5/cache.30                       --print-interval=10                     --momentum=0.0                     --max-param-change=2.0                     --backstitch-training-scale=0.0                     --l2-regularize-factor=0.2                     --backstitch-training-interval=1                     --srand=30                      "nnet3-copy --learning-rate=0.0040025244234 --scale=1.0 exp/nnet3/multitask_bottleneck_300_0.5_0.5/30.raw - |" "ark,bg:nnet3-copy-egs --frame=0 --outputs=ark:exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs/egs.output.12.ark --weights=ark:exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs/egs.weight.12.ark             scp:exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs/egs.12.scp ark:- |             nnet3-shuffle-egs --buffer-size=5000             --srand=30 ark:- ark:- |              nnet3-merge-egs --minibatch-size=256,128 ark:- ark:- |"                     exp/nnet3/multitask_bottleneck_300_0.5_0.5/31.4.raw
+steps/nnet3/train_raw_dnn.py --stage=-10 --cmd=run.pl --mem 4G --feat.cmvn-opts=--norm-means=false --norm-vars=false --trainer.num-epochs 2 --trainer.optimization.num-jobs-initial=2 --trainer.optimization.num-jobs-final=8 --trainer.optimization.initial-effective-lrate=0.0015 --trainer.optimization.final-effective-lrate=0.00015 --trainer.optimization.minibatch-size=256,128 --trainer.samples-per-iter=400000 --trainer.max-param-change=2.0 --trainer.srand=0 --feat-dir data/101-recognition/cv_train_nz_sp_hires --feat.online-ivector-dir exp/101-recognition/nnet3/ivectors_cv_train_nz_sp --egs.dir exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs --use-dense-targets false --targets-scp exp/101-recognition/tri4_cv_train_nz_ali --cleanup.remove-egs false --cleanup.preserve-model-interval 50 --use-gpu true --dir=exp/nnet3/multitask_bottleneck_300_0.5_0.5
+['steps/nnet3/train_raw_dnn.py', '--stage=-10', '--cmd=run.pl --mem 4G', '--feat.cmvn-opts=--norm-means=false --norm-vars=false', '--trainer.num-epochs', '2', '--trainer.optimization.num-jobs-initial=2', '--trainer.optimization.num-jobs-final=8', '--trainer.optimization.initial-effective-lrate=0.0015', '--trainer.optimization.final-effective-lrate=0.00015', '--trainer.optimization.minibatch-size=256,128', '--trainer.samples-per-iter=400000', '--trainer.max-param-change=2.0', '--trainer.srand=0', '--feat-dir', 'data/101-recognition/cv_train_nz_sp_hires', '--feat.online-ivector-dir', 'exp/101-recognition/nnet3/ivectors_cv_train_nz_sp', '--egs.dir', 'exp/nnet3/multitask_bottleneck_300_0.5_0.5/egs', '--use-dense-targets', 'false', '--targets-scp', 'exp/101-recognition/tri4_cv_train_nz_ali', '--cleanup.remove-egs', 'false', '--cleanup.preserve-model-interval', '50', '--use-gpu', 'true', '--dir=exp/nnet3/multitask_bottleneck_300_0.5_0.5']

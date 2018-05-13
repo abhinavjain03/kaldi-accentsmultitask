@@ -1,0 +1,240 @@
+steps/nnet3/multilingual/combine_egs.sh --lang2weight '0.12,0.12,0.12,0.14,0.14,0.14,0.22' --cmd run.pl --mem 4G --samples-per-iter 400000 7 exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/egs_1 exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/egs_2 exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/egs_3 exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/egs_4 exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/egs_5 exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/egs_6 exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/egs_7 exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/egs
+steps/nnet3/multilingual/combine_egs.sh: allocating multilingual examples for training.
+steps/nnet3/multilingual/combine_egs.sh: combine combine.scp examples from all langs in exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/egs/combine.scp.
+steps/nnet3/multilingual/combine_egs.sh: combine train_diagnostic.scp examples from all langs in exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/egs/train_diagnostic.scp.
+steps/nnet3/multilingual/combine_egs.sh: combine valid_diagnostic.scp examples from all langs in exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/egs/valid_diagnostic.scp.
+steps/nnet3/multilingual/combine_egs.sh: Finished preparing multilingual training example.
+2018-03-13 17:26:21,689 [steps/nnet3/train_raw_dnn.py:34 - <module> - INFO ] Starting raw DNN trainer (train_raw_dnn.py)
+2018-03-13 17:26:21,766 [steps/nnet3/train_raw_dnn.py:172 - train - INFO ] Arguments for the experiment
+{'backstitch_training_interval': 1,
+ 'backstitch_training_scale': 0.0,
+ 'cleanup': True,
+ 'cmvn_opts': '--norm-means=false --norm-vars=false',
+ 'combine_sum_to_one_penalty': 0.0,
+ 'command': 'run.pl --mem 4G',
+ 'compute_average_posteriors': False,
+ 'compute_per_dim_accuracy': False,
+ 'dir': 'exp/nnet3_separate_accents/multitask_separate_accents_variable_nz',
+ 'do_final_combination': True,
+ 'dropout_schedule': None,
+ 'egs_command': None,
+ 'egs_dir': 'exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/egs',
+ 'egs_opts': None,
+ 'egs_stage': 0,
+ 'email': None,
+ 'exit_stage': None,
+ 'feat_dir': 'data/101/train_sp_hires',
+ 'final_effective_lrate': 0.00015,
+ 'frames_per_eg': 8,
+ 'image_augmentation_opts': None,
+ 'initial_effective_lrate': 0.0015,
+ 'max_lda_jobs': 10,
+ 'max_models_combine': 20,
+ 'max_param_change': 2.0,
+ 'minibatch_size': '256,128',
+ 'momentum': 0.0,
+ 'nj': 4,
+ 'num_epochs': 2.0,
+ 'num_jobs_compute_prior': 10,
+ 'num_jobs_final': 4,
+ 'num_jobs_initial': 4,
+ 'online_ivector_dir': 'exp/101/ivectors_train_sp',
+ 'preserve_model_interval': 50,
+ 'presoftmax_prior_scale_power': -0.25,
+ 'prior_subset_size': 20000,
+ 'proportional_shrink': 0.0,
+ 'rand_prune': 4.0,
+ 'remove_egs': False,
+ 'reporting_interval': 0.1,
+ 'samples_per_iter': 400000,
+ 'shuffle_buffer_size': 5000,
+ 'srand': 0,
+ 'stage': -10,
+ 'targets_scp': 'exp/101/ali',
+ 'transform_dir': None,
+ 'use_dense_targets': False,
+ 'use_gpu': True}
+2018-03-13 17:26:21,849 [steps/nnet3/train_raw_dnn.py:283 - train - INFO ] Preparing the initial network.
+2018-03-13 17:26:29,705 [steps/nnet3/train_raw_dnn.py:322 - train - INFO ] Training will run for 2.0 epochs = 44 iterations
+2018-03-13 17:26:29,705 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 0)
+2018-03-13 17:26:29,728 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 0, learning rate is 0.006.
+2018-03-13 17:32:52,521 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 1)
+2018-03-13 17:32:52,588 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 1, learning rate is 0.00569408541625.
+2018-03-13 17:37:16,166 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 2)
+2018-03-13 17:37:16,220 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 2, learning rate is 0.00540376812127.
+2018-03-13 17:41:32,658 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 3)
+2018-03-13 17:41:32,750 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 3, learning rate is 0.00512825287536.
+2018-03-13 17:45:45,998 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 4)
+2018-03-13 17:45:46,064 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 4, learning rate is 0.00486678498474.
+2018-03-13 17:50:16,992 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 5)
+2018-03-13 17:50:17,048 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 5, learning rate is 0.00461864823427.
+2018-03-13 17:54:33,112 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 6)
+2018-03-13 17:54:33,164 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 6, learning rate is 0.0043831629256.
+2018-03-13 17:58:52,546 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 7)
+2018-03-13 17:58:52,600 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 7, learning rate is 0.00415968401529.
+2018-03-13 18:03:13,272 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 8)
+2018-03-13 18:03:13,320 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 8, learning rate is 0.00394759934795.
+2018-03-13 18:07:37,686 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 9)
+2018-03-13 18:07:37,728 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 9, learning rate is 0.00374632797939.
+2018-03-13 18:12:02,953 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 10)
+2018-03-13 18:12:03,004 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 10, learning rate is 0.00355531858533.
+2018-03-13 18:16:48,073 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 11)
+2018-03-13 18:16:48,082 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 11, learning rate is 0.00337404795114.
+2018-03-13 18:21:40,500 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 12)
+2018-03-13 18:21:40,511 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 12, learning rate is 0.00320201953872.
+2018-03-13 18:26:39,312 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 13)
+2018-03-13 18:26:39,326 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 13, learning rate is 0.00303876212634.
+2018-03-13 18:31:40,624 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 14)
+2018-03-13 18:31:40,632 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 14, learning rate is 0.00288382851784.
+2018-03-13 18:36:46,622 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 15)
+2018-03-13 18:36:46,629 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 15, learning rate is 0.00273679431773.
+2018-03-13 18:42:14,328 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 16)
+2018-03-13 18:42:14,336 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 16, learning rate is 0.00259725676865.
+2018-03-13 18:46:53,128 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 17)
+2018-03-13 18:46:53,134 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 17, learning rate is 0.00246483364811.
+2018-03-13 18:50:46,147 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 18)
+2018-03-13 18:50:46,177 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 18, learning rate is 0.00233916222153.
+2018-03-13 18:54:46,427 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 19)
+2018-03-13 18:54:46,475 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 19, learning rate is 0.00221989824864.
+2018-03-13 18:58:36,940 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 20)
+2018-03-13 18:58:36,952 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 20, learning rate is 0.00210671504053.
+2018-03-13 19:05:19,419 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 21)
+2018-03-13 19:05:19,426 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 21, learning rate is 0.00199930256475.
+2018-03-13 19:09:39,957 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 22)
+2018-03-13 19:09:39,963 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 22, learning rate is 0.0018973665961.
+2018-03-13 19:13:47,003 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 23)
+2018-03-13 19:13:47,010 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 23, learning rate is 0.00180062791069.
+2018-03-13 19:17:54,759 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 24)
+2018-03-13 19:17:54,769 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 24, learning rate is 0.00170882152106.
+2018-03-13 19:21:55,535 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 25)
+2018-03-13 19:21:55,543 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 25, learning rate is 0.00162169595034.
+2018-03-13 19:26:05,267 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 26)
+2018-03-13 19:26:05,299 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 26, learning rate is 0.00153901254341.
+2018-03-13 19:30:04,883 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 27)
+2018-03-13 19:30:04,891 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 27, learning rate is 0.00146054481314.
+2018-03-13 19:34:14,403 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 28)
+2018-03-13 19:34:14,409 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 28, learning rate is 0.00138607782005.
+2018-03-13 19:38:16,835 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 29)
+2018-03-13 19:38:16,841 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 29, learning rate is 0.00131540758349.
+2018-03-13 19:42:31,313 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 30)
+2018-03-13 19:42:31,320 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 30, learning rate is 0.00124834052293.
+2018-03-13 19:46:32,593 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 31)
+2018-03-13 19:46:32,608 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 31, learning rate is 0.00118469292769.
+2018-03-13 19:50:28,390 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 32)
+2018-03-13 19:50:28,400 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 32, learning rate is 0.00112429045372.
+2018-03-13 19:54:35,370 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 33)
+2018-03-13 19:54:35,378 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 33, learning rate is 0.00106696764602.
+2018-03-13 19:58:38,272 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 34)
+2018-03-13 19:58:38,278 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 34, learning rate is 0.00101256748547.
+2018-03-13 20:02:51,854 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 35)
+2018-03-13 20:02:51,863 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 35, learning rate is 0.000960940958668.
+2018-03-13 20:06:59,621 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 36)
+2018-03-13 20:06:59,629 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 36, learning rate is 0.000911946649772.
+2018-03-13 20:10:51,910 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 37)
+2018-03-13 20:10:51,921 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 37, learning rate is 0.000865450353145.
+2018-03-13 20:14:40,716 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 38)
+2018-03-13 20:14:40,724 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 38, learning rate is 0.000821324705722.
+2018-03-13 20:18:38,764 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 39)
+2018-03-13 20:18:38,780 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 39, learning rate is 0.000779448838144.
+2018-03-13 20:22:33,494 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 40)
+2018-03-13 20:22:33,501 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 40, learning rate is 0.000739708043665.
+2018-03-13 20:29:10,335 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 41)
+2018-03-13 20:29:10,342 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 41, learning rate is 0.000701993463953.
+2018-03-13 20:33:29,029 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 42)
+2018-03-13 20:33:29,037 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 42, learning rate is 0.000666201790901.
+2018-03-13 20:37:29,931 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 43)
+2018-03-13 20:37:29,942 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 43, learning rate is 0.0006.
+2018-03-13 20:41:16,974 [steps/nnet3/train_raw_dnn.py:395 - train - INFO ] Doing final combination to produce final.raw
+2018-03-13 20:41:16,975 [steps/libs/nnet3/train/frame_level_objf/common.py:466 - combine_models - INFO ] Combining set([32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 25, 26, 27, 28, 29, 30, 31]) models.
+2018-03-13 21:00:52,764 [steps/nnet3/train_raw_dnn.py:417 - train - INFO ] Cleaning up the experiment directory exp/nnet3_separate_accents/multitask_separate_accents_variable_nz
+exp/nnet3_separate_accents/multitask_separate_accents_variable_nz: num-iters=44 nj=4..4 num-params=83.1M combine=-2.76->-2.65
+steps/nnet3/train_raw_dnn.py --stage=-10 --cmd=run.pl --mem 4G --feat.cmvn-opts=--norm-means=false --norm-vars=false --trainer.num-epochs 2 --trainer.optimization.num-jobs-initial=4 --trainer.optimization.num-jobs-final=4 --trainer.optimization.initial-effective-lrate=0.0015 --trainer.optimization.final-effective-lrate=0.00015 --trainer.optimization.minibatch-size=256,128 --trainer.samples-per-iter=400000 --trainer.max-param-change=2.0 --trainer.srand=0 --feat-dir data/101/train_sp_hires --feat.online-ivector-dir exp/101/ivectors_train_sp --egs.dir exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/egs --use-dense-targets false --targets-scp exp/101/ali --cleanup.remove-egs false --cleanup.preserve-model-interval 50 --use-gpu true --dir=exp/nnet3_separate_accents/multitask_separate_accents_variable_nz
+['steps/nnet3/train_raw_dnn.py', '--stage=-10', '--cmd=run.pl --mem 4G', '--feat.cmvn-opts=--norm-means=false --norm-vars=false', '--trainer.num-epochs', '2', '--trainer.optimization.num-jobs-initial=4', '--trainer.optimization.num-jobs-final=4', '--trainer.optimization.initial-effective-lrate=0.0015', '--trainer.optimization.final-effective-lrate=0.00015', '--trainer.optimization.minibatch-size=256,128', '--trainer.samples-per-iter=400000', '--trainer.max-param-change=2.0', '--trainer.srand=0', '--feat-dir', 'data/101/train_sp_hires', '--feat.online-ivector-dir', 'exp/101/ivectors_train_sp', '--egs.dir', 'exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/egs', '--use-dense-targets', 'false', '--targets-scp', 'exp/101/ali', '--cleanup.remove-egs', 'false', '--cleanup.preserve-model-interval', '50', '--use-gpu', 'true', '--dir=exp/nnet3_separate_accents/multitask_separate_accents_variable_nz']
+nnet3-copy '--edits=rename-node old-name=output-0 new-name=output' exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/final.raw - 
+nnet3-am-init exp/101/ali/final.mdl - exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/101/final.mdl 
+LOG (nnet3-copy[5.2.204~1-08848]:main():nnet3-copy.cc:114) Copied raw neural net from exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/final.raw to -
+LOG (nnet3-am-init[5.2.204~1-08848]:main():nnet3-am-init.cc:96) Initialized am-nnet (neural net acoustic model) and wrote to exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/101/final.mdl
+./run_multitask_with_separate_accents.sh: compute average posterior and readjust priors for language 01-recognition.
+steps/nnet3/adjust_priors.sh exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/101 exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/egs_1
+nnet3-am-init exp/102/ali/final.mdl - exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/102/final.mdl 
+nnet3-copy '--edits=rename-node old-name=output-1 new-name=output' exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/final.raw - 
+LOG (nnet3-copy[5.2.204~1-08848]:main():nnet3-copy.cc:114) Copied raw neural net from exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/final.raw to -
+LOG (nnet3-am-init[5.2.204~1-08848]:main():nnet3-am-init.cc:96) Initialized am-nnet (neural net acoustic model) and wrote to exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/102/final.mdl
+./run_multitask_with_separate_accents.sh: compute average posterior and readjust priors for language 01-recognition.
+steps/nnet3/adjust_priors.sh exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/102 exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/egs_2
+nnet3-am-init exp/103/ali/final.mdl - exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/103/final.mdl 
+nnet3-copy '--edits=rename-node old-name=output-2 new-name=output' exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/final.raw - 
+LOG (nnet3-copy[5.2.204~1-08848]:main():nnet3-copy.cc:114) Copied raw neural net from exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/final.raw to -
+LOG (nnet3-am-init[5.2.204~1-08848]:main():nnet3-am-init.cc:96) Initialized am-nnet (neural net acoustic model) and wrote to exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/103/final.mdl
+./run_multitask_with_separate_accents.sh: compute average posterior and readjust priors for language 01-recognition.
+steps/nnet3/adjust_priors.sh exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/103 exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/egs_3
+nnet3-am-init exp/104/ali/final.mdl - exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/104/final.mdl 
+nnet3-copy '--edits=rename-node old-name=output-3 new-name=output' exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/final.raw - 
+LOG (nnet3-copy[5.2.204~1-08848]:main():nnet3-copy.cc:114) Copied raw neural net from exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/final.raw to -
+LOG (nnet3-am-init[5.2.204~1-08848]:main():nnet3-am-init.cc:96) Initialized am-nnet (neural net acoustic model) and wrote to exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/104/final.mdl
+./run_multitask_with_separate_accents.sh: compute average posterior and readjust priors for language 01-recognition.
+steps/nnet3/adjust_priors.sh exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/104 exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/egs_4
+steps/nnet3/decode.sh --nj 20 --cmd run.pl --mem 4G --stage -2 --beam 15.0 --lattice-beam 8.0 --skip-scoring false --online-ivector-dir exp/101/ivectors_dev /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg data/101/dev_hires exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/101/decode_dev
+steps/nnet2/check_ivectors_compatible.sh: WARNING: One of the directories do not contain iVector ID.
+steps/nnet2/check_ivectors_compatible.sh: WARNING: That means it's you who's reponsible for keeping 
+steps/nnet2/check_ivectors_compatible.sh: WARNING: the directories compatible
+steps/nnet3/decode.sh: feature type is raw
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/101/decode_dev
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/101/decode_dev/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(2,7,38) and mean=15.0
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/101/decode_dev/log/analyze_lattice_depth_stats.log
+score best paths
+local/score.sh --iter final --cmd run.pl --mem 4G data/101/dev_hires /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/101/decode_dev
+local/score.sh: scoring with word insertion penalty=0.0,0.5,1.0
+score confidence and timing with sclite
+Decoding done.
+steps/nnet3/decode.sh --nj 20 --cmd run.pl --mem 4G --stage -2 --beam 15.0 --lattice-beam 8.0 --skip-scoring false --online-ivector-dir exp/102/ivectors_dev /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg data/102/dev_hires exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/102/decode_dev
+steps/nnet2/check_ivectors_compatible.sh: WARNING: One of the directories do not contain iVector ID.
+steps/nnet2/check_ivectors_compatible.sh: WARNING: That means it's you who's reponsible for keeping 
+steps/nnet2/check_ivectors_compatible.sh: WARNING: the directories compatible
+steps/nnet3/decode.sh: feature type is raw
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/102/decode_dev
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/102/decode_dev/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(3,11,42) and mean=18.9
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/102/decode_dev/log/analyze_lattice_depth_stats.log
+score best paths
+local/score.sh --iter final --cmd run.pl --mem 4G data/102/dev_hires /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/102/decode_dev
+local/score.sh: scoring with word insertion penalty=0.0,0.5,1.0
+score confidence and timing with sclite
+Decoding done.
+steps/nnet3/decode.sh --nj 20 --cmd run.pl --mem 4G --stage -2 --beam 15.0 --lattice-beam 8.0 --skip-scoring false --online-ivector-dir exp/103/ivectors_dev /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg data/103/dev_hires exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/103/decode_dev
+steps/nnet2/check_ivectors_compatible.sh: WARNING: One of the directories do not contain iVector ID.
+steps/nnet2/check_ivectors_compatible.sh: WARNING: That means it's you who's reponsible for keeping 
+steps/nnet2/check_ivectors_compatible.sh: WARNING: the directories compatible
+steps/nnet3/decode.sh: feature type is raw
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/103/decode_dev
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/103/decode_dev/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(4,14,71) and mean=31.3
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/103/decode_dev/log/analyze_lattice_depth_stats.log
+score best paths
+local/score.sh --iter final --cmd run.pl --mem 4G data/103/dev_hires /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/103/decode_dev
+local/score.sh: scoring with word insertion penalty=0.0,0.5,1.0
+score confidence and timing with sclite
+Decoding done.
+steps/nnet3/decode.sh --nj 20 --cmd run.pl --mem 4G --stage -2 --beam 15.0 --lattice-beam 8.0 --skip-scoring false --online-ivector-dir exp/104/ivectors_dev /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg data/104/dev_hires exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/104/decode_dev
+steps/nnet2/check_ivectors_compatible.sh: WARNING: One of the directories do not contain iVector ID.
+steps/nnet2/check_ivectors_compatible.sh: WARNING: That means it's you who's reponsible for keeping 
+steps/nnet2/check_ivectors_compatible.sh: WARNING: the directories compatible
+steps/nnet3/decode.sh: feature type is raw
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/104/decode_dev
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/104/decode_dev/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(3,13,52) and mean=22.6
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/104/decode_dev/log/analyze_lattice_depth_stats.log
+score best paths
+local/score.sh --iter final --cmd run.pl --mem 4G data/104/dev_hires /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/104/decode_dev
+local/score.sh: scoring with word insertion penalty=0.0,0.5,1.0
+score confidence and timing with sclite
+Decoding done.
+%WER 32.53 [ 1917 / 5893, 163 ins, 574 del, 1180 sub ] exp/nnet3_separate_accents/multitask_separate_accents_0.14_nz/101/decode_dev/wer_7_0.0
+%WER 58.35 [ 1663 / 2850, 22 ins, 1063 del, 578 sub ] exp/nnet3_separate_accents/multitask_separate_accents_0.14_nz/102/decode_dev/wer_7_0.0
+%WER 67.43 [ 617 / 915, 15 ins, 362 del, 240 sub ] exp/nnet3_separate_accents/multitask_separate_accents_0.14_nz/103/decode_dev/wer_7_0.0
+%WER 55.32 [ 442 / 799, 6 ins, 273 del, 163 sub ] exp/nnet3_separate_accents/multitask_separate_accents_0.14_nz/104/decode_dev/wer_7_0.0
+%WER 33.33 [ 1964 / 5893, 137 ins, 615 del, 1212 sub ] exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/101/decode_dev/wer_7_0.0
+%WER 59.75 [ 1703 / 2850, 18 ins, 1069 del, 616 sub ] exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/102/decode_dev/wer_7_0.0
+%WER 68.09 [ 623 / 915, 11 ins, 366 del, 246 sub ] exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/103/decode_dev/wer_7_0.0
+%WER 56.20 [ 449 / 799, 6 ins, 273 del, 170 sub ] exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/104/decode_dev/wer_7_0.0

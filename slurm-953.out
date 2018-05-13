@@ -1,0 +1,58 @@
+steps/nnet3/xconfig_to_configs.py --xconfig-file exp/nnet3/multitask_withReducedOutputs/configs/network.xconfig --config-dir exp/nnet3/multitask_withReducedOutputs/configs/ --nnet-edits=rename-node old-name=output-0 new-name=output
+nnet3-init exp/nnet3/multitask_withReducedOutputs/configs//ref.config exp/nnet3/multitask_withReducedOutputs/configs//ref.raw 
+LOG (nnet3-init[5.2.204~1-08848]:main():nnet3-init.cc:80) Initialized raw neural net and wrote it to exp/nnet3/multitask_withReducedOutputs/configs//ref.raw
+nnet3-info "nnet3-copy --edits='rename-node old-name=output-0 new-name=output' exp/nnet3/multitask_withReducedOutputs/configs//ref.raw - |" 
+nnet3-copy '--edits=rename-node old-name=output-0 new-name=output' exp/nnet3/multitask_withReducedOutputs/configs//ref.raw - 
+LOG (nnet3-copy[5.2.204~1-08848]:main():nnet3-copy.cc:114) Copied raw neural net from exp/nnet3/multitask_withReducedOutputs/configs//ref.raw to -
+nnet3-init exp/nnet3/multitask_withReducedOutputs/configs//ref.config exp/nnet3/multitask_withReducedOutputs/configs//ref.raw 
+LOG (nnet3-init[5.2.204~1-08848]:main():nnet3-init.cc:80) Initialized raw neural net and wrote it to exp/nnet3/multitask_withReducedOutputs/configs//ref.raw
+nnet3-info "nnet3-copy --edits='rename-node old-name=output-0 new-name=output' exp/nnet3/multitask_withReducedOutputs/configs//ref.raw - |" 
+nnet3-copy '--edits=rename-node old-name=output-0 new-name=output' exp/nnet3/multitask_withReducedOutputs/configs//ref.raw - 
+LOG (nnet3-copy[5.2.204~1-08848]:main():nnet3-copy.cc:114) Copied raw neural net from exp/nnet3/multitask_withReducedOutputs/configs//ref.raw to -
+./run.sh: calling get_egs.sh for generating examples with alignments as output
+steps/nnet3/get_egs.sh --cmvn-opts --norm-means=false --norm-vars=false --online-ivector-dir exp/101-recognition/nnet3/ivectors_cv_train_nz_sp --transform-dir exp/101-recognition/tri4_cv_train_nz_ali --left-context 16 --right-context 12 --num-utts-subset 300 --nj 20 --samples-per-iter 400000 --cmd run.pl --generate-egs-scp true --frames-per-eg 8 data/101-recognition/cv_train_nz_sp_hires exp/101-recognition/tri4_cv_train_nz_ali exp/nnet3/multitask_withReducedOutputs/egs_aligns
+File data/101-recognition/cv_train_nz_sp_hires/utt2uniq exists, so augmenting valid_uttlist to
+include all perturbed versions of the same 'real' utterances.
+steps/nnet3/get_egs.sh: feature type is raw
+feat-to-dim scp:exp/101-recognition/nnet3/ivectors_cv_train_nz_sp/ivector_online.scp - 
+steps/nnet3/get_egs.sh: working out number of frames of training data
+steps/nnet3/get_egs.sh: working out feature dim
+steps/nnet3/get_egs.sh: creating 12 archives, each with 387321 egs, with
+steps/nnet3/get_egs.sh:   8 labels per example, and (left,right) context = (16,12)
+steps/nnet3/get_egs.sh: copying data alignments
+copy-int-vector ark:- ark,scp:exp/nnet3/multitask_withReducedOutputs/egs_aligns/ali.ark,exp/nnet3/multitask_withReducedOutputs/egs_aligns/ali.scp 
+LOG (copy-int-vector[5.2.204~1-08848]:main():copy-int-vector.cc:83) Copied 92660 vectors of int32.
+steps/nnet3/get_egs.sh: Getting validation and training subset examples.
+steps/nnet3/get_egs.sh: ... extracting validation and training-subset alignments.
+... Getting subsets of validation examples for diagnostics and combination.
+nnet3-copy-egs ark:- ark,scp:exp/nnet3/multitask_withReducedOutputs/egs_aligns/combine.egs,exp/nnet3/multitask_withReducedOutputs/egs_aligns/combine.scp 
+LOG (nnet3-copy-egs[5.2.204~1-08848]:main():nnet3-copy-egs.cc:436) Read 7500 neural-network training examples, wrote 7500, 0 examples had errors.
+rm: cannot remove 'exp/nnet3/multitask_withReducedOutputs/egs_aligns/train_combine.scp': No such file or directory
+rm: cannot remove 'exp/nnet3/multitask_withReducedOutputs/egs_aligns/valid_combine.scp': No such file or directory
+steps/nnet3/get_egs.sh: Generating training examples on disk
+steps/nnet3/get_egs.sh: recombining and shuffling order of archives on disk
+steps/nnet3/get_egs.sh: removing temporary archives
+steps/nnet3/get_egs.sh: removing temporary alignments and transforms
+steps/nnet3/get_egs.sh: Finished preparing training examples
+./run.sh: calling get_egs.sh for generating examples with alignments as output
+steps/nnet3/get_egs_mod.sh --cmvn-opts --norm-means=false --norm-vars=false --online-ivector-dir exp/102-class/nnet3/ivectors_cv_trainx_nz_sp --transform-dir exp/102-class/ali --left-context 16 --right-context 12 --num-utts-subset 300 --nj 20 --num-pdfs 7 --samples-per-iter 400000 --cmd run.pl --generate-egs-scp true --frames-per-eg 8 data/102-class/cv_trainx_nz_sp_hires exp/102-class/ali exp/nnet3/multitask_withReducedOutputs/egs_accents
+File data/102-class/cv_trainx_nz_sp_hires/utt2uniq exists, so augmenting valid_uttlist to
+include all perturbed versions of the same 'real' utterances.
+steps/nnet3/get_egs_mod.sh: feature type is raw
+feat-to-dim scp:exp/102-class/nnet3/ivectors_cv_trainx_nz_sp/ivector_online.scp - 
+steps/nnet3/get_egs_mod.sh: working out number of frames of training data
+steps/nnet3/get_egs_mod.sh: working out feature dim
+steps/nnet3/get_egs_mod.sh: creating 12 archives, each with 387321 egs, with
+steps/nnet3/get_egs_mod.sh:   8 labels per example, and (left,right) context = (16,12)
+steps/nnet3/get_egs_mod.sh: copying data alignments
+copy-int-vector ark:- ark,scp:exp/nnet3/multitask_withReducedOutputs/egs_accents/ali.ark,exp/nnet3/multitask_withReducedOutputs/egs_accents/ali.scp 
+LOG (copy-int-vector[5.2.204~1-08848]:main():copy-int-vector.cc:83) Copied 92660 vectors of int32.
+steps/nnet3/get_egs_mod.sh: Getting validation and training subset examples.
+steps/nnet3/get_egs_mod.sh: ... extracting validation and training-subset alignments.
+... Getting subsets of validation examples for diagnostics and combination.
+nnet3-copy-egs ark:- ark,scp:exp/nnet3/multitask_withReducedOutputs/egs_accents/combine.egs,exp/nnet3/multitask_withReducedOutputs/egs_accents/combine.scp 
+LOG (nnet3-copy-egs[5.2.204~1-08848]:main():nnet3-copy-egs.cc:436) Read 7500 neural-network training examples, wrote 7500, 0 examples had errors.
+rm: cannot remove 'exp/nnet3/multitask_withReducedOutputs/egs_accents/train_combine.scp': No such file or directory
+rm: cannot remove 'exp/nnet3/multitask_withReducedOutputs/egs_accents/valid_combine.scp': No such file or directory
+steps/nnet3/get_egs_mod.sh: Generating training examples on disk
+run.pl: 6 / 20 failed, log is in exp/nnet3/multitask_withReducedOutputs/egs_accents/log/get_egs.*.log

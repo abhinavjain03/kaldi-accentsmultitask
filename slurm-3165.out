@@ -1,0 +1,92 @@
+2018-03-23 00:59:21,907 [steps/nnet3/train_raw_dnn.py:34 - <module> - INFO ] Starting raw DNN trainer (train_raw_dnn.py)
+2018-03-23 00:59:21,918 [steps/nnet3/train_raw_dnn.py:172 - train - INFO ] Arguments for the experiment
+{'backstitch_training_interval': 1,
+ 'backstitch_training_scale': 0.0,
+ 'cleanup': True,
+ 'cmvn_opts': '--norm-means=false --norm-vars=false',
+ 'combine_sum_to_one_penalty': 0.0,
+ 'command': 'run.pl --mem 4G',
+ 'compute_average_posteriors': False,
+ 'compute_per_dim_accuracy': False,
+ 'dir': 'scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage',
+ 'do_final_combination': True,
+ 'dropout_schedule': None,
+ 'egs_command': None,
+ 'egs_dir': 'scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/egs',
+ 'egs_opts': None,
+ 'egs_stage': 0,
+ 'email': None,
+ 'exit_stage': None,
+ 'feat_dir': 'data_uttLevel/101-recog-min/cv_train_nz_mfcc_bnf_appended_sp',
+ 'final_effective_lrate': 0.00015,
+ 'frames_per_eg': 8,
+ 'image_augmentation_opts': None,
+ 'initial_effective_lrate': 0.0015,
+ 'max_lda_jobs': 10,
+ 'max_models_combine': 20,
+ 'max_param_change': 2.0,
+ 'minibatch_size': '256,128',
+ 'momentum': 0.0,
+ 'nj': 4,
+ 'num_epochs': 2.0,
+ 'num_jobs_compute_prior': 10,
+ 'num_jobs_final': 8,
+ 'num_jobs_initial': 2,
+ 'online_ivector_dir': 'exp/101-recog-min/nnet3/ivectors_cv_train_nz_sp',
+ 'preserve_model_interval': 50,
+ 'presoftmax_prior_scale_power': -0.25,
+ 'prior_subset_size': 20000,
+ 'proportional_shrink': 10.0,
+ 'rand_prune': 4.0,
+ 'remove_egs': False,
+ 'reporting_interval': 0.1,
+ 'samples_per_iter': 400000,
+ 'shuffle_buffer_size': 5000,
+ 'srand': 0,
+ 'stage': 59,
+ 'targets_scp': 'exp/101-recog-min/tri4_cv_train_nz_ali',
+ 'transform_dir': None,
+ 'use_dense_targets': False,
+ 'use_gpu': True}
+2018-03-23 00:59:22,210 [steps/nnet3/train_raw_dnn.py:322 - train - INFO ] Training will run for 2.0 epochs = 73 iterations
+2018-03-23 00:59:22,211 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 59)
+2018-03-23 00:59:22,219 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 59, learning rate is 0.00208978853657 and shrink value is 0.979102114634.
+2018-03-23 01:07:50,632 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 60)
+2018-03-23 01:07:50,640 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 60, learning rate is 0.0020002330709 and shrink value is 0.979997669291.
+2018-03-23 01:18:48,370 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 61)
+2018-03-23 01:21:08,717 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 61, learning rate is 0.00191451540091 and shrink value is 0.980854845991.
+2018-03-23 01:29:32,967 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 62)
+2018-03-23 01:29:32,975 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 62, learning rate is 0.00183247106233 and shrink value is 0.981675289377.
+2018-03-23 01:37:43,511 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 63)
+2018-03-23 01:37:43,524 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 63, learning rate is 0.00175394263878 and shrink value is 0.982460573612.
+2018-03-23 01:45:31,618 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 64)
+2018-03-23 01:45:31,626 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 64, learning rate is 0.00167877945981 and shrink value is 0.983212205402.
+2018-03-23 01:53:41,238 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 65)
+2018-03-23 01:53:41,247 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 65, learning rate is 0.00160683731177 and shrink value is 0.983931626882.
+2018-03-23 02:02:37,033 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 66)
+2018-03-23 02:02:37,040 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 66, learning rate is 0.00153797816109 and shrink value is 0.984620218389.
+2018-03-23 02:10:45,585 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 67)
+2018-03-23 02:10:45,592 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 67, learning rate is 0.00168236558801 and shrink value is 0.98317634412.
+2018-03-23 02:19:36,300 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 68)
+2018-03-23 02:19:36,308 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 68, learning rate is 0.0016002257186 and shrink value is 0.983997742814.
+2018-03-23 02:28:45,762 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 69)
+2018-03-23 02:28:45,771 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 69, learning rate is 0.0015220962487 and shrink value is 0.984779037513.
+2018-03-23 02:37:52,050 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 70)
+2018-03-23 02:37:52,059 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 70, learning rate is 0.00144778137445 and shrink value is 0.985522186255.
+2018-03-23 02:47:00,025 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 71)
+2018-03-23 02:47:00,032 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 71, learning rate is 0.00137709485192 and shrink value is 0.986229051481.
+2018-03-23 02:56:08,636 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 72)
+2018-03-23 02:56:08,643 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 72, learning rate is 0.0012 and shrink value is 0.988.
+2018-03-23 03:05:10,775 [steps/nnet3/train_raw_dnn.py:395 - train - INFO ] Doing final combination to produce final.raw
+2018-03-23 03:05:10,776 [steps/libs/nnet3/train/frame_level_objf/common.py:466 - combine_models - INFO ] Combining set([64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63]) models.
+2018-03-23 03:21:15,090 [steps/nnet3/train_raw_dnn.py:417 - train - INFO ] Cleaning up the experiment directory scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage
+scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage: num-iters=73 nj=2..8 num-params=31.4M combine=-0.64->-0.56
+steps/nnet3/train_raw_dnn.py --stage=59 --cmd=run.pl --mem 4G --feat.cmvn-opts=--norm-means=false --norm-vars=false --trainer.num-epochs 2 --trainer.optimization.num-jobs-initial=2 --trainer.optimization.num-jobs-final=8 --trainer.optimization.initial-effective-lrate=0.0015 --trainer.optimization.final-effective-lrate=0.00015 --trainer.optimization.minibatch-size=256,128 --trainer.optimization.proportional-shrink=10 --trainer.samples-per-iter=400000 --trainer.max-param-change=2.0 --trainer.srand=0 --feat-dir data_uttLevel/101-recog-min/cv_train_nz_mfcc_bnf_appended_sp --feat.online-ivector-dir exp/101-recog-min/nnet3/ivectors_cv_train_nz_sp --egs.dir scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/egs --use-dense-targets false --targets-scp exp/101-recog-min/tri4_cv_train_nz_ali --cleanup.remove-egs false --cleanup.preserve-model-interval 50 --use-gpu true --dir=scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage
+['steps/nnet3/train_raw_dnn.py', '--stage=59', '--cmd=run.pl --mem 4G', '--feat.cmvn-opts=--norm-means=false --norm-vars=false', '--trainer.num-epochs', '2', '--trainer.optimization.num-jobs-initial=2', '--trainer.optimization.num-jobs-final=8', '--trainer.optimization.initial-effective-lrate=0.0015', '--trainer.optimization.final-effective-lrate=0.00015', '--trainer.optimization.minibatch-size=256,128', '--trainer.optimization.proportional-shrink=10', '--trainer.samples-per-iter=400000', '--trainer.max-param-change=2.0', '--trainer.srand=0', '--feat-dir', 'data_uttLevel/101-recog-min/cv_train_nz_mfcc_bnf_appended_sp', '--feat.online-ivector-dir', 'exp/101-recog-min/nnet3/ivectors_cv_train_nz_sp', '--egs.dir', 'scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/egs', '--use-dense-targets', 'false', '--targets-scp', 'exp/101-recog-min/tri4_cv_train_nz_ali', '--cleanup.remove-egs', 'false', '--cleanup.preserve-model-interval', '50', '--use-gpu', 'true', '--dir=scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage']
+nnet3-copy '--edits=rename-node old-name=output-0 new-name=output' scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/final.raw - 
+nnet3-am-init exp/101-recog-min/tri4_cv_train_nz_ali/final.mdl - scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min/final.mdl 
+LOG (nnet3-copy[5.2.204~1-08848]:main():nnet3-copy.cc:114) Copied raw neural net from scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/final.raw to -
+LOG (nnet3-am-init[5.2.204~1-08848]:main():nnet3-am-init.cc:96) Initialized am-nnet (neural net acoustic model) and wrote to scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min/final.mdl
+./multitask_monster_with_inputembeddings.sh: compute average posterior and readjust priors for language 01-recognition.
+steps/nnet3/adjust_priors.sh scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/101-recog-min scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/egs_aligns
+scratch/nnet3_combined_withembedding/multitask_a300_t024_10shrink_0.9_0.1_withsaloneembedinput_utt_diffinputstage/egs_aligns/egs.1.ark not found

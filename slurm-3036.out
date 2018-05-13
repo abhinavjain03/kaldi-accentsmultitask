@@ -1,0 +1,67 @@
+2018-03-18 19:04:36,666 [steps/nnet3/train_raw_dnn.py:34 - <module> - INFO ] Starting raw DNN trainer (train_raw_dnn.py)
+2018-03-18 19:04:36,673 [steps/nnet3/train_raw_dnn.py:172 - train - INFO ] Arguments for the experiment
+{'backstitch_training_interval': 1,
+ 'backstitch_training_scale': 0.0,
+ 'cleanup': True,
+ 'cmvn_opts': '--norm-means=false --norm-vars=false',
+ 'combine_sum_to_one_penalty': 0.0,
+ 'command': 'run.pl --mem 4G',
+ 'compute_average_posteriors': False,
+ 'compute_per_dim_accuracy': False,
+ 'dir': 'exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext',
+ 'do_final_combination': True,
+ 'dropout_schedule': None,
+ 'egs_command': None,
+ 'egs_dir': 'exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/egs',
+ 'egs_opts': None,
+ 'egs_stage': 0,
+ 'email': None,
+ 'exit_stage': None,
+ 'feat_dir': 'data/101-recog-min/cv_train_nz_sp_hires',
+ 'final_effective_lrate': 0.00015,
+ 'frames_per_eg': 8,
+ 'image_augmentation_opts': None,
+ 'initial_effective_lrate': 0.0015,
+ 'max_lda_jobs': 10,
+ 'max_models_combine': 20,
+ 'max_param_change': 2.0,
+ 'minibatch_size': '256,128',
+ 'momentum': 0.0,
+ 'nj': 4,
+ 'num_epochs': 2.0,
+ 'num_jobs_compute_prior': 10,
+ 'num_jobs_final': 8,
+ 'num_jobs_initial': 2,
+ 'online_ivector_dir': 'exp/101-recog-min/nnet3/ivectors_cv_train_nz_sp',
+ 'preserve_model_interval': 50,
+ 'presoftmax_prior_scale_power': -0.25,
+ 'prior_subset_size': 20000,
+ 'proportional_shrink': 10.0,
+ 'rand_prune': 4.0,
+ 'remove_egs': False,
+ 'reporting_interval': 0.1,
+ 'samples_per_iter': 400000,
+ 'shuffle_buffer_size': 5000,
+ 'srand': 0,
+ 'stage': 60,
+ 'targets_scp': 'exp/101-recog-min/tri4_cv_train_nz_ali',
+ 'transform_dir': None,
+ 'use_dense_targets': False,
+ 'use_gpu': True}
+2018-03-18 19:04:36,711 [steps/nnet3/train_raw_dnn.py:322 - train - INFO ] Training will run for 2.0 epochs = 73 iterations
+2018-03-18 19:04:36,712 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 60)
+2018-03-18 19:04:36,721 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 60, learning rate is 0.0020002330709 and shrink value is 0.979997669291.
+run.pl: job failed, log is in exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/log/progress.60.log
+run.pl: job failed, log is in exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/log/compute_prob_valid.60.log
+2018-03-18 19:04:36,782 [steps/libs/common.py:237 - background_command_waiter - WARNING ] Command exited with status 1: run.pl --mem 4G exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/log/progress.60.log                     nnet3-info exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/60.raw '&&'                     nnet3-show-progress --use-gpu=no exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/59.raw exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/60.raw 
+2018-03-18 19:04:36,782 [steps/libs/common.py:237 - background_command_waiter - WARNING ] Command exited with status 1:  run.pl --mem 4G exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/log/compute_prob_valid.60.log                 nnet3-compute-prob "exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/60.raw"                 "ark,bg:nnet3-copy-egs --outputs=ark:exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/egs/valid_diagnostic.output.ark --weights=ark:exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/egs/valid_diagnostic.weight.ark                     scp:exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/egs/valid_diagnostic.scp ark:- |                     nnet3-merge-egs --minibatch-size=1:64 ark:-                     ark:- |" 
+run.pl: job failed, log is in exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/log/compute_prob_train.60.log
+2018-03-18 19:04:36,789 [steps/libs/common.py:237 - background_command_waiter - WARNING ] Command exited with status 1: run.pl --mem 4G exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/log/compute_prob_train.60.log                 nnet3-compute-prob  "exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/60.raw"                 "ark,bg:nnet3-copy-egs --outputs=ark:exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/egs/train_diagnostic.output.ark --weights=ark:exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/egs/train_diagnostic.weight.ark                     scp:exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/egs/train_diagnostic.scp ark:- |                     nnet3-merge-egs --minibatch-size=1:64 ark:-                     ark:- |" 
+run.pl: job failed, log is in exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/log/train.60.2.log
+2018-03-18 19:04:59,764 [steps/libs/common.py:231 - background_command_waiter - ERROR ] Command exited with status 1: run.pl --mem 4G --gpu 1 exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/log/train.60.2.log                     nnet3-train  --read-cache=exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/cache.60                      --verbose=1 --print-interval=10                     --momentum=0.0                     --max-param-change=2.0                     --backstitch-training-scale=0.0                     --l2-regularize-factor=0.142857142857                     --backstitch-training-interval=1                     --srand=60                      "nnet3-copy --learning-rate=0.0020002330709 --scale=0.979997669291 exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/60.raw - |" "ark,bg:nnet3-copy-egs --frame=1 --outputs=ark:exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/egs/egs.output.14.ark --weights=ark:exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/egs/egs.weight.14.ark             scp:exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/egs/egs.14.scp ark:- |             nnet3-shuffle-egs --buffer-size=5000             --srand=60 ark:- ark:- |              nnet3-merge-egs --minibatch-size=256,128 ark:- ark:- |"                     exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/61.2.raw
+run.pl: job failed, log is in exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/log/train.60.4.log
+2018-03-18 19:05:04,156 [steps/libs/common.py:231 - background_command_waiter - ERROR ] Command exited with status 1: run.pl --mem 4G --gpu 1 exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/log/train.60.4.log                     nnet3-train  --read-cache=exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/cache.60                      --verbose=1 --print-interval=10                     --momentum=0.0                     --max-param-change=2.0                     --backstitch-training-scale=0.0                     --l2-regularize-factor=0.142857142857                     --backstitch-training-interval=1                     --srand=60                      "nnet3-copy --learning-rate=0.0020002330709 --scale=0.979997669291 exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/60.raw - |" "ark,bg:nnet3-copy-egs --frame=3 --outputs=ark:exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/egs/egs.output.16.ark --weights=ark:exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/egs/egs.weight.16.ark             scp:exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/egs/egs.16.scp ark:- |             nnet3-shuffle-egs --buffer-size=5000             --srand=60 ark:- ark:- |              nnet3-merge-egs --minibatch-size=256,128 ark:- ark:- |"                     exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/61.4.raw
+run.pl: job failed, log is in exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/log/train.60.1.log
+2018-03-18 19:05:04,169 [steps/libs/common.py:231 - background_command_waiter - ERROR ] Command exited with status 1: run.pl --mem 4G --gpu 1 exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/log/train.60.1.log                     nnet3-train  --read-cache=exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/cache.60 --write-cache=exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/cache.61                      --verbose=1 --print-interval=10                     --momentum=0.0                     --max-param-change=2.0                     --backstitch-training-scale=0.0                     --l2-regularize-factor=0.142857142857                     --backstitch-training-interval=1                     --srand=60                      "nnet3-copy --learning-rate=0.0020002330709 --scale=0.979997669291 exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/60.raw - |" "ark,bg:nnet3-copy-egs --frame=0 --outputs=ark:exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/egs/egs.output.13.ark --weights=ark:exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/egs/egs.weight.13.ark             scp:exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/egs/egs.13.scp ark:- |             nnet3-shuffle-egs --buffer-size=5000             --srand=60 ark:- ark:- |              nnet3-merge-egs --minibatch-size=256,128 ark:- ark:- |"                     exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/61.1.raw
+steps/nnet3/train_raw_dnn.py --stage=60 --cmd=run.pl --mem 4G --feat.cmvn-opts=--norm-means=false --norm-vars=false --trainer.num-epochs 2 --trainer.optimization.num-jobs-initial=2 --trainer.optimization.num-jobs-final=8 --trainer.optimization.initial-effective-lrate=0.0015 --trainer.optimization.final-effective-lrate=0.00015 --trainer.optimization.minibatch-size=256,128 --trainer.optimization.proportional-shrink=10 --trainer.samples-per-iter=400000 --trainer.max-param-change=2.0 --trainer.srand=0 --feat-dir data/101-recog-min/cv_train_nz_sp_hires --feat.online-ivector-dir exp/101-recog-min/nnet3/ivectors_cv_train_nz_sp --egs.dir exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/egs --use-dense-targets false --targets-scp exp/101-recog-min/tri4_cv_train_nz_ali --cleanup.remove-egs false --cleanup.preserve-model-interval 50 --use-gpu true --dir=exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext
+['steps/nnet3/train_raw_dnn.py', '--stage=60', '--cmd=run.pl --mem 4G', '--feat.cmvn-opts=--norm-means=false --norm-vars=false', '--trainer.num-epochs', '2', '--trainer.optimization.num-jobs-initial=2', '--trainer.optimization.num-jobs-final=8', '--trainer.optimization.initial-effective-lrate=0.0015', '--trainer.optimization.final-effective-lrate=0.00015', '--trainer.optimization.minibatch-size=256,128', '--trainer.optimization.proportional-shrink=10', '--trainer.samples-per-iter=400000', '--trainer.max-param-change=2.0', '--trainer.srand=0', '--feat-dir', 'data/101-recog-min/cv_train_nz_sp_hires', '--feat.online-ivector-dir', 'exp/101-recog-min/nnet3/ivectors_cv_train_nz_sp', '--egs.dir', 'exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext/egs', '--use-dense-targets', 'false', '--targets-scp', 'exp/101-recog-min/tri4_cv_train_nz_ali', '--cleanup.remove-egs', 'false', '--cleanup.preserve-model-interval', '50', '--use-gpu', 'true', '--dir=exp/nnet3_combined/multitask_acc300btn_tdnn1024_10shrink_0.5_0.5_withcontext']

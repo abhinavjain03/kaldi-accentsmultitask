@@ -1,0 +1,2 @@
+steps/append_feats.sh --cmd run.pl --nj 20 data_uttLevel/101-recog-min/cv_train_nz_sp_bnf data_uttLevel/101-recog-min/cv_train_nz_sp_hires data_uttLevel/101-recog-min/cv_train_nz_mfcc_bnf_appended_sp temp_exp/append_hires_mfcc_bnf/101-recog-min/cv_train_nz_sp temp_exp/append_mfcc_bnf/101-recog-min
+run.pl: 20 / 20 failed, log is in temp_exp/append_hires_mfcc_bnf/101-recog-min/cv_train_nz_sp/append.*.log

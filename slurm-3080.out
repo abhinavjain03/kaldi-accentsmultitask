@@ -1,0 +1,126 @@
+2018-03-20 08:18:34,003 [steps/nnet3/train_raw_dnn.py:34 - <module> - INFO ] Starting raw DNN trainer (train_raw_dnn.py)
+2018-03-20 08:18:34,013 [steps/nnet3/train_raw_dnn.py:172 - train - INFO ] Arguments for the experiment
+{'backstitch_training_interval': 1,
+ 'backstitch_training_scale': 0.0,
+ 'cleanup': True,
+ 'cmvn_opts': '--norm-means=false --norm-vars=false',
+ 'combine_sum_to_one_penalty': 0.0,
+ 'command': 'run.pl --mem 4G',
+ 'compute_average_posteriors': False,
+ 'compute_per_dim_accuracy': False,
+ 'dir': 'exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0',
+ 'do_final_combination': True,
+ 'dropout_schedule': '0,0.5,0',
+ 'egs_command': None,
+ 'egs_dir': 'exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0/egs',
+ 'egs_opts': None,
+ 'egs_stage': 0,
+ 'email': None,
+ 'exit_stage': None,
+ 'feat_dir': 'data/101-recog-min/cv_train_nz_sp_hires',
+ 'final_effective_lrate': 0.00015,
+ 'frames_per_eg': 8,
+ 'image_augmentation_opts': None,
+ 'initial_effective_lrate': 0.0015,
+ 'max_lda_jobs': 10,
+ 'max_models_combine': 20,
+ 'max_param_change': 2.0,
+ 'minibatch_size': '256,128',
+ 'momentum': 0.0,
+ 'nj': 4,
+ 'num_epochs': 2.0,
+ 'num_jobs_compute_prior': 10,
+ 'num_jobs_final': 8,
+ 'num_jobs_initial': 2,
+ 'online_ivector_dir': 'exp/101-recog-min/nnet3/ivectors_cv_train_nz_sp',
+ 'preserve_model_interval': 50,
+ 'presoftmax_prior_scale_power': -0.25,
+ 'prior_subset_size': 20000,
+ 'proportional_shrink': 0.0,
+ 'rand_prune': 4.0,
+ 'remove_egs': False,
+ 'reporting_interval': 0.1,
+ 'samples_per_iter': 400000,
+ 'shuffle_buffer_size': 5000,
+ 'srand': 0,
+ 'stage': 64,
+ 'targets_scp': 'exp/101-recog-min/tri4_cv_train_nz_ali',
+ 'transform_dir': None,
+ 'use_dense_targets': False,
+ 'use_gpu': True}
+2018-03-20 08:18:34,073 [steps/nnet3/train_raw_dnn.py:322 - train - INFO ] Training will run for 2.0 epochs = 73 iterations
+2018-03-20 08:18:34,073 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 64)
+2018-03-20 08:18:34,083 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 64, learning rate is 0.00167877945981.
+2018-03-20 08:23:45,563 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 65)
+2018-03-20 08:23:45,586 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 65, learning rate is 0.00160683731177.
+2018-03-20 08:31:58,518 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 66)
+2018-03-20 08:31:58,528 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 66, learning rate is 0.00153797816109.
+2018-03-20 08:38:10,904 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 67)
+2018-03-20 08:38:10,915 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 67, learning rate is 0.00168236558801.
+2018-03-20 08:45:03,833 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 68)
+2018-03-20 08:45:03,841 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 68, learning rate is 0.0016002257186.
+2018-03-20 08:52:16,158 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 69)
+2018-03-20 08:52:16,166 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 69, learning rate is 0.0015220962487.
+2018-03-20 09:00:24,247 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 70)
+2018-03-20 09:00:24,256 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 70, learning rate is 0.00144778137445.
+2018-03-20 09:05:27,143 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 71)
+2018-03-20 09:05:27,151 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 71, learning rate is 0.00137709485192.
+2018-03-20 09:10:23,031 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 72)
+2018-03-20 09:10:23,039 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 72, learning rate is 0.0012.
+2018-03-20 09:15:27,454 [steps/nnet3/train_raw_dnn.py:395 - train - INFO ] Doing final combination to produce final.raw
+2018-03-20 09:15:27,454 [steps/libs/nnet3/train/frame_level_objf/common.py:466 - combine_models - INFO ] Combining set([64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63]) models.
+2018-03-20 09:25:02,249 [steps/nnet3/train_raw_dnn.py:417 - train - INFO ] Cleaning up the experiment directory exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0
+exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0: num-iters=73 nj=2..8 num-params=30.8M combine=-0.45->-0.39
+steps/nnet3/train_raw_dnn.py --stage=64 --cmd=run.pl --mem 4G --feat.cmvn-opts=--norm-means=false --norm-vars=false --trainer.num-epochs 2 --trainer.optimization.num-jobs-initial=2 --trainer.optimization.num-jobs-final=8 --trainer.optimization.initial-effective-lrate=0.0015 --trainer.optimization.final-effective-lrate=0.00015 --trainer.optimization.minibatch-size=256,128 --trainer.dropout-schedule=0,0.5,0 --trainer.samples-per-iter=400000 --trainer.max-param-change=2.0 --trainer.srand=0 --feat-dir data/101-recog-min/cv_train_nz_sp_hires --feat.online-ivector-dir exp/101-recog-min/nnet3/ivectors_cv_train_nz_sp --egs.dir exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0/egs --use-dense-targets false --targets-scp exp/101-recog-min/tri4_cv_train_nz_ali --cleanup.remove-egs false --cleanup.preserve-model-interval 50 --use-gpu true --dir=exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0
+['steps/nnet3/train_raw_dnn.py', '--stage=64', '--cmd=run.pl --mem 4G', '--feat.cmvn-opts=--norm-means=false --norm-vars=false', '--trainer.num-epochs', '2', '--trainer.optimization.num-jobs-initial=2', '--trainer.optimization.num-jobs-final=8', '--trainer.optimization.initial-effective-lrate=0.0015', '--trainer.optimization.final-effective-lrate=0.00015', '--trainer.optimization.minibatch-size=256,128', '--trainer.dropout-schedule=0,0.5,0', '--trainer.samples-per-iter=400000', '--trainer.max-param-change=2.0', '--trainer.srand=0', '--feat-dir', 'data/101-recog-min/cv_train_nz_sp_hires', '--feat.online-ivector-dir', 'exp/101-recog-min/nnet3/ivectors_cv_train_nz_sp', '--egs.dir', 'exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0/egs', '--use-dense-targets', 'false', '--targets-scp', 'exp/101-recog-min/tri4_cv_train_nz_ali', '--cleanup.remove-egs', 'false', '--cleanup.preserve-model-interval', '50', '--use-gpu', 'true', '--dir=exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0']
+nnet3-am-init exp/101-recog-min/tri4_cv_train_nz_ali/final.mdl - exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0/101-recog-min/final.mdl 
+nnet3-copy '--edits=rename-node old-name=output-0 new-name=output' exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0/final.raw - 
+LOG (nnet3-copy[5.2.204~1-08848]:main():nnet3-copy.cc:114) Copied raw neural net from exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0/final.raw to -
+LOG (nnet3-am-init[5.2.204~1-08848]:main():nnet3-am-init.cc:96) Initialized am-nnet (neural net acoustic model) and wrote to exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0/101-recog-min/final.mdl
+./multitask_run_2_base.sh: compute average posterior and readjust priors for language 01-recognition.
+steps/nnet3/adjust_priors.sh exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0/101-recog-min exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0/egs_aligns
+steps/nnet3/decode.sh --nj 20 --cmd run.pl --mem 4G --stage -2 --beam 15.0 --lattice-beam 8.0 --skip-scoring false --online-ivector-dir exp/101-recog-min/nnet3/ivectors_cv_dev_nz /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg data/101-recog-min/cv_dev_nz_hires exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0/101-recog-min/decode_cv_dev_nz
+steps/nnet2/check_ivectors_compatible.sh: WARNING: One of the directories do not contain iVector ID.
+steps/nnet2/check_ivectors_compatible.sh: WARNING: That means it's you who's reponsible for keeping 
+steps/nnet2/check_ivectors_compatible.sh: WARNING: the directories compatible
+steps/nnet3/decode.sh: feature type is raw
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0/101-recog-min/decode_cv_dev_nz
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0/101-recog-min/decode_cv_dev_nz/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,3,20) and mean=8.3
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0/101-recog-min/decode_cv_dev_nz/log/analyze_lattice_depth_stats.log
+score best paths
+local/score.sh --iter final --cmd run.pl --mem 4G data/101-recog-min/cv_dev_nz_hires /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0/101-recog-min/decode_cv_dev_nz
+local/score.sh: scoring with word insertion penalty=0.0,0.5,1.0
+score confidence and timing with sclite
+Decoding done.
+steps/nnet3/decode.sh --nj 20 --cmd run.pl --mem 4G --stage -2 --beam 15.0 --lattice-beam 8.0 --skip-scoring false --online-ivector-dir exp/101-recog-min/nnet3/ivectors_cv_test_onlynz /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg data/101-recog-min/cv_test_onlynz_hires exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0/101-recog-min/decode_cv_test_onlynz
+steps/nnet2/check_ivectors_compatible.sh: WARNING: One of the directories do not contain iVector ID.
+steps/nnet2/check_ivectors_compatible.sh: WARNING: That means it's you who's reponsible for keeping 
+steps/nnet2/check_ivectors_compatible.sh: WARNING: the directories compatible
+steps/nnet3/decode.sh: feature type is raw
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0/101-recog-min/decode_cv_test_onlynz
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0/101-recog-min/decode_cv_test_onlynz/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,4,23) and mean=9.7
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0/101-recog-min/decode_cv_test_onlynz/log/analyze_lattice_depth_stats.log
+score best paths
+local/score.sh --iter final --cmd run.pl --mem 4G data/101-recog-min/cv_test_onlynz_hires /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0/101-recog-min/decode_cv_test_onlynz
+local/score.sh: scoring with word insertion penalty=0.0,0.5,1.0
+score confidence and timing with sclite
+Decoding done.
+steps/nnet3/decode.sh --nj 20 --cmd run.pl --mem 4G --stage -2 --beam 15.0 --lattice-beam 8.0 --skip-scoring false --online-ivector-dir exp/101-recog-min/nnet3/ivectors_cv_test_onlyindian /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg data/101-recog-min/cv_test_onlyindian_hires exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0/101-recog-min/decode_cv_test_onlyindian
+steps/nnet2/check_ivectors_compatible.sh: WARNING: One of the directories do not contain iVector ID.
+steps/nnet2/check_ivectors_compatible.sh: WARNING: That means it's you who's reponsible for keeping 
+steps/nnet2/check_ivectors_compatible.sh: WARNING: the directories compatible
+steps/nnet3/decode.sh: feature type is raw
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0/101-recog-min/decode_cv_test_onlyindian
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0/101-recog-min/decode_cv_test_onlyindian/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(2,10,52) and mean=19.9
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0/101-recog-min/decode_cv_test_onlyindian/log/analyze_lattice_depth_stats.log
+score best paths
+local/score.sh --iter final --cmd run.pl --mem 4G data/101-recog-min/cv_test_onlyindian_hires /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0/101-recog-min/decode_cv_test_onlyindian
+local/score.sh: scoring with word insertion penalty=0.0,0.5,1.0
+score confidence and timing with sclite
+Decoding done.
+%WER 23.24 [ 2414 / 10386, 210 ins, 609 del, 1595 sub ] exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0/101-recog-min/decode_cv_dev_nz/wer_7_0.0
+%WER 64.82 [ 527 / 813, 24 ins, 224 del, 279 sub ] exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0/101-recog-min/decode_cv_test_onlyindian/wer_8_0.0
+%WER 29.89 [ 1521 / 5089, 112 ins, 408 del, 1001 sub ] exp/nnet3_combined/multitask_a300_t1024_0.50.5_wcon_2drops_0+0.5+0/101-recog-min/decode_cv_test_onlynz/wer_7_0.0

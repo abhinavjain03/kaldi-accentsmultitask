@@ -1,0 +1,24 @@
+steps/nnet3/xconfig_to_configs.py --xconfig-file exp/nnet3/multitask_accentOutputAt4_0.7_0.3/configs/network.xconfig --config-dir exp/nnet3/multitask_accentOutputAt4_0.7_0.3/configs/ --nnet-edits=rename-node old-name=output-0 new-name=output
+nnet3-init exp/nnet3/multitask_accentOutputAt4_0.7_0.3/configs//ref.config exp/nnet3/multitask_accentOutputAt4_0.7_0.3/configs//ref.raw 
+LOG (nnet3-init[5.2.204~1-08848]:main():nnet3-init.cc:80) Initialized raw neural net and wrote it to exp/nnet3/multitask_accentOutputAt4_0.7_0.3/configs//ref.raw
+nnet3-info "nnet3-copy --edits='rename-node old-name=output-0 new-name=output' exp/nnet3/multitask_accentOutputAt4_0.7_0.3/configs//ref.raw - |" 
+nnet3-copy '--edits=rename-node old-name=output-0 new-name=output' exp/nnet3/multitask_accentOutputAt4_0.7_0.3/configs//ref.raw - 
+LOG (nnet3-copy[5.2.204~1-08848]:main():nnet3-copy.cc:114) Copied raw neural net from exp/nnet3/multitask_accentOutputAt4_0.7_0.3/configs//ref.raw to -
+nnet3-init exp/nnet3/multitask_accentOutputAt4_0.7_0.3/configs//ref.config exp/nnet3/multitask_accentOutputAt4_0.7_0.3/configs//ref.raw 
+LOG (nnet3-init[5.2.204~1-08848]:main():nnet3-init.cc:80) Initialized raw neural net and wrote it to exp/nnet3/multitask_accentOutputAt4_0.7_0.3/configs//ref.raw
+nnet3-info "nnet3-copy --edits='rename-node old-name=output-0 new-name=output' exp/nnet3/multitask_accentOutputAt4_0.7_0.3/configs//ref.raw - |" 
+nnet3-copy '--edits=rename-node old-name=output-0 new-name=output' exp/nnet3/multitask_accentOutputAt4_0.7_0.3/configs//ref.raw - 
+LOG (nnet3-copy[5.2.204~1-08848]:main():nnet3-copy.cc:114) Copied raw neural net from exp/nnet3/multitask_accentOutputAt4_0.7_0.3/configs//ref.raw to -
+./run.sh: calling get_egs.sh for generating examples with alignments as output
+steps/nnet3/get_egs.sh --cmvn-opts --norm-means=false --norm-vars=false --online-ivector-dir exp/101-recognition/nnet3/ivectors_cv_train_nz_sp --transform-dir exp/101-recognition/tri4_cv_train_nz_ali --left-context 16 --right-context 12 --num-utts-subset 300 --nj 20 --samples-per-iter 400000 --cmd run.pl --generate-egs-scp true --frames-per-eg 8 data/101-recognition/cv_train_nz_sp_hires exp/101-recognition/tri4_cv_train_nz_ali exp/nnet3/multitask_accentOutputAt4_0.7_0.3/egs_aligns
+File data/101-recognition/cv_train_nz_sp_hires/utt2uniq exists, so augmenting valid_uttlist to
+include all perturbed versions of the same 'real' utterances.
+steps/nnet3/get_egs.sh: feature type is raw
+feat-to-dim scp:exp/101-recognition/nnet3/ivectors_cv_train_nz_sp/ivector_online.scp - 
+steps/nnet3/get_egs.sh: working out number of frames of training data
+steps/nnet3/get_egs.sh: working out feature dim
+steps/nnet3/get_egs.sh: creating 12 archives, each with 387321 egs, with
+steps/nnet3/get_egs.sh:   8 labels per example, and (left,right) context = (16,12)
+steps/nnet3/get_egs.sh: copying data alignments
+copy-int-vector ark:- ark,scp:exp/nnet3/multitask_accentOutputAt4_0.7_0.3/egs_aligns/ali.ark,exp/nnet3/multitask_accentOutputAt4_0.7_0.3/egs_aligns/ali.scp 
+slurmstepd: *** JOB 1323 ON dhvani CANCELLED AT 2018-02-17T15:29:03 ***

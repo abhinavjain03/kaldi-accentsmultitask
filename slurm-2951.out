@@ -1,0 +1,187 @@
+2018-03-16 17:16:47,308 [steps/nnet3/train_raw_dnn.py:34 - <module> - INFO ] Starting raw DNN trainer (train_raw_dnn.py)
+2018-03-16 17:16:47,319 [steps/nnet3/train_raw_dnn.py:172 - train - INFO ] Arguments for the experiment
+{'backstitch_training_interval': 1,
+ 'backstitch_training_scale': 0.0,
+ 'cleanup': True,
+ 'cmvn_opts': '--norm-means=false --norm-vars=false',
+ 'combine_sum_to_one_penalty': 0.0,
+ 'command': 'run.pl --mem 4G',
+ 'compute_average_posteriors': False,
+ 'compute_per_dim_accuracy': False,
+ 'dir': 'exp/nnet3_combined/multitask_acc512btn_tdnn1024_0.5_0.5_withcontext',
+ 'do_final_combination': True,
+ 'dropout_schedule': None,
+ 'egs_command': None,
+ 'egs_dir': 'exp/nnet3_combined/multitask_acc512btn_tdnn1024_0.5_0.5_withcontext/egs',
+ 'egs_opts': None,
+ 'egs_stage': 0,
+ 'email': None,
+ 'exit_stage': None,
+ 'feat_dir': 'data/101-recog-min/cv_train_nz_sp_hires',
+ 'final_effective_lrate': 0.00015,
+ 'frames_per_eg': 8,
+ 'image_augmentation_opts': None,
+ 'initial_effective_lrate': 0.0015,
+ 'max_lda_jobs': 10,
+ 'max_models_combine': 20,
+ 'max_param_change': 2.0,
+ 'minibatch_size': '256,128',
+ 'momentum': 0.0,
+ 'nj': 4,
+ 'num_epochs': 2.0,
+ 'num_jobs_compute_prior': 10,
+ 'num_jobs_final': 8,
+ 'num_jobs_initial': 2,
+ 'online_ivector_dir': 'exp/101-recog-min/nnet3/ivectors_cv_train_nz_sp',
+ 'preserve_model_interval': 50,
+ 'presoftmax_prior_scale_power': -0.25,
+ 'prior_subset_size': 20000,
+ 'proportional_shrink': 0.0,
+ 'rand_prune': 4.0,
+ 'remove_egs': False,
+ 'reporting_interval': 0.1,
+ 'samples_per_iter': 400000,
+ 'shuffle_buffer_size': 5000,
+ 'srand': 0,
+ 'stage': 53,
+ 'targets_scp': 'exp/101-recog-min/tri4_cv_train_nz_ali',
+ 'transform_dir': None,
+ 'use_dense_targets': False,
+ 'use_gpu': True}
+2018-03-16 17:16:47,353 [steps/nnet3/train_raw_dnn.py:322 - train - INFO ] Training will run for 2.0 epochs = 73 iterations
+2018-03-16 17:16:47,353 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 53)
+2018-03-16 17:16:47,384 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 53, learning rate is 0.00230065344873.
+2018-03-16 17:23:56,221 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 54)
+2018-03-16 17:23:56,227 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 54, learning rate is 0.00221588316135.
+2018-03-16 17:31:21,685 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 55)
+2018-03-16 17:31:21,691 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 55, learning rate is 0.00248994239094.
+2018-03-16 17:36:34,786 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 56)
+2018-03-16 17:36:34,793 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 56, learning rate is 0.00238323879562.
+2018-03-16 17:45:14,358 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 57)
+2018-03-16 17:45:14,364 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 57, learning rate is 0.0022811078592.
+2018-03-16 17:51:02,477 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 58)
+2018-03-16 17:51:02,488 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 58, learning rate is 0.0021833536257.
+2018-03-16 17:55:41,492 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 59)
+2018-03-16 17:55:41,501 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 59, learning rate is 0.00208978853657.
+2018-03-16 18:00:29,548 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 60)
+2018-03-16 18:00:29,560 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 60, learning rate is 0.0020002330709.
+2018-03-16 18:08:05,868 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 61)
+2018-03-16 18:08:05,878 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 61, learning rate is 0.00191451540091.
+2018-03-16 18:12:57,512 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 62)
+2018-03-16 18:12:57,520 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 62, learning rate is 0.00183247106233.
+2018-03-16 18:17:54,563 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 63)
+2018-03-16 18:17:54,571 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 63, learning rate is 0.00175394263878.
+2018-03-16 18:24:44,751 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 64)
+2018-03-16 18:24:44,761 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 64, learning rate is 0.00167877945981.
+2018-03-16 18:32:43,736 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 65)
+2018-03-16 18:32:43,745 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 65, learning rate is 0.00160683731177.
+2018-03-16 18:38:39,861 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 66)
+2018-03-16 18:38:39,868 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 66, learning rate is 0.00153797816109.
+2018-03-16 18:44:16,954 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 67)
+2018-03-16 18:44:16,961 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 67, learning rate is 0.00168236558801.
+2018-03-16 18:51:07,866 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 68)
+2018-03-16 18:51:07,875 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 68, learning rate is 0.0016002257186.
+2018-03-16 19:00:27,201 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 69)
+2018-03-16 19:00:27,210 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 69, learning rate is 0.0015220962487.
+2018-03-16 19:09:41,248 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 70)
+2018-03-16 19:09:41,260 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 70, learning rate is 0.00144778137445.
+2018-03-16 19:14:32,519 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 71)
+2018-03-16 19:14:32,527 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 71, learning rate is 0.00137709485192.
+2018-03-16 19:20:19,365 [steps/libs/nnet3/train/frame_level_objf/common.py:201 - train_one_iteration - INFO ] Training neural net (pass 72)
+2018-03-16 19:20:19,373 [steps/libs/nnet3/train/frame_level_objf/common.py:265 - train_one_iteration - INFO ] On iteration 72, learning rate is 0.0012.
+2018-03-16 19:25:07,469 [steps/nnet3/train_raw_dnn.py:395 - train - INFO ] Doing final combination to produce final.raw
+2018-03-16 19:25:07,469 [steps/libs/nnet3/train/frame_level_objf/common.py:466 - combine_models - INFO ] Combining set([64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63]) models.
+2018-03-16 19:34:40,778 [steps/nnet3/train_raw_dnn.py:417 - train - INFO ] Cleaning up the experiment directory exp/nnet3_combined/multitask_acc512btn_tdnn1024_0.5_0.5_withcontext
+exp/nnet3_combined/multitask_acc512btn_tdnn1024_0.5_0.5_withcontext: num-iters=73 nj=2..8 num-params=31.6M combine=-0.36->-0.33
+steps/nnet3/train_raw_dnn.py --stage=53 --cmd=run.pl --mem 4G --feat.cmvn-opts=--norm-means=false --norm-vars=false --trainer.num-epochs 2 --trainer.optimization.num-jobs-initial=2 --trainer.optimization.num-jobs-final=8 --trainer.optimization.initial-effective-lrate=0.0015 --trainer.optimization.final-effective-lrate=0.00015 --trainer.optimization.minibatch-size=256,128 --trainer.samples-per-iter=400000 --trainer.max-param-change=2.0 --trainer.srand=0 --feat-dir data/101-recog-min/cv_train_nz_sp_hires --feat.online-ivector-dir exp/101-recog-min/nnet3/ivectors_cv_train_nz_sp --egs.dir exp/nnet3_combined/multitask_acc512btn_tdnn1024_0.5_0.5_withcontext/egs --use-dense-targets false --targets-scp exp/101-recog-min/tri4_cv_train_nz_ali --cleanup.remove-egs false --cleanup.preserve-model-interval 50 --use-gpu true --dir=exp/nnet3_combined/multitask_acc512btn_tdnn1024_0.5_0.5_withcontext
+['steps/nnet3/train_raw_dnn.py', '--stage=53', '--cmd=run.pl --mem 4G', '--feat.cmvn-opts=--norm-means=false --norm-vars=false', '--trainer.num-epochs', '2', '--trainer.optimization.num-jobs-initial=2', '--trainer.optimization.num-jobs-final=8', '--trainer.optimization.initial-effective-lrate=0.0015', '--trainer.optimization.final-effective-lrate=0.00015', '--trainer.optimization.minibatch-size=256,128', '--trainer.samples-per-iter=400000', '--trainer.max-param-change=2.0', '--trainer.srand=0', '--feat-dir', 'data/101-recog-min/cv_train_nz_sp_hires', '--feat.online-ivector-dir', 'exp/101-recog-min/nnet3/ivectors_cv_train_nz_sp', '--egs.dir', 'exp/nnet3_combined/multitask_acc512btn_tdnn1024_0.5_0.5_withcontext/egs', '--use-dense-targets', 'false', '--targets-scp', 'exp/101-recog-min/tri4_cv_train_nz_ali', '--cleanup.remove-egs', 'false', '--cleanup.preserve-model-interval', '50', '--use-gpu', 'true', '--dir=exp/nnet3_combined/multitask_acc512btn_tdnn1024_0.5_0.5_withcontext']
+nnet3-am-init exp/101-recog-min/tri4_cv_train_nz_ali/final.mdl - exp/nnet3_combined/multitask_acc512btn_tdnn1024_0.5_0.5_withcontext/101-recog-min/final.mdl 
+nnet3-copy '--edits=rename-node old-name=output-0 new-name=output' exp/nnet3_combined/multitask_acc512btn_tdnn1024_0.5_0.5_withcontext/final.raw - 
+LOG (nnet3-copy[5.2.204~1-08848]:main():nnet3-copy.cc:114) Copied raw neural net from exp/nnet3_combined/multitask_acc512btn_tdnn1024_0.5_0.5_withcontext/final.raw to -
+LOG (nnet3-am-init[5.2.204~1-08848]:main():nnet3-am-init.cc:96) Initialized am-nnet (neural net acoustic model) and wrote to exp/nnet3_combined/multitask_acc512btn_tdnn1024_0.5_0.5_withcontext/101-recog-min/final.mdl
+./multitask_run_2_base.sh: compute average posterior and readjust priors for language 01-recognition.
+steps/nnet3/adjust_priors.sh exp/nnet3_combined/multitask_acc512btn_tdnn1024_0.5_0.5_withcontext/101-recog-min exp/nnet3_combined/multitask_acc512btn_tdnn1024_0.5_0.5_withcontext/egs_aligns
+steps/nnet3/decode.sh --nj 20 --cmd run.pl --mem 4G --stage -2 --beam 15.0 --lattice-beam 8.0 --skip-scoring false --online-ivector-dir exp/101-recog-min/nnet3/ivectors_cv_dev_nz /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg data/101-recog-min/cv_dev_nz_hires exp/nnet3_combined/multitask_acc512btn_tdnn1024_0.5_0.5_withcontext/101-recog-min/decode_cv_dev_nz
+steps/nnet2/check_ivectors_compatible.sh: WARNING: One of the directories do not contain iVector ID.
+steps/nnet2/check_ivectors_compatible.sh: WARNING: That means it's you who's reponsible for keeping 
+steps/nnet2/check_ivectors_compatible.sh: WARNING: the directories compatible
+steps/nnet3/decode.sh: feature type is raw
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg exp/nnet3_combined/multitask_acc512btn_tdnn1024_0.5_0.5_withcontext/101-recog-min/decode_cv_dev_nz
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_combined/multitask_acc512btn_tdnn1024_0.5_0.5_withcontext/101-recog-min/decode_cv_dev_nz/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,3,20) and mean=8.7
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_combined/multitask_acc512btn_tdnn1024_0.5_0.5_withcontext/101-recog-min/decode_cv_dev_nz/log/analyze_lattice_depth_stats.log
+score best paths
+local/score.sh --iter final --cmd run.pl --mem 4G data/101-recog-min/cv_dev_nz_hires /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg exp/nnet3_combined/multitask_acc512btn_tdnn1024_0.5_0.5_withcontext/101-recog-min/decode_cv_dev_nz
+local/score.sh: scoring with word insertion penalty=0.0,0.5,1.0
+score confidence and timing with sclite
+Decoding done.
+steps/nnet3/decode.sh --nj 20 --cmd run.pl --mem 4G --stage -2 --beam 15.0 --lattice-beam 8.0 --skip-scoring false --online-ivector-dir exp/101-recog-min/nnet3/ivectors_cv_test_onlynz /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg data/101-recog-min/cv_test_onlynz_hires exp/nnet3_combined/multitask_acc512btn_tdnn1024_0.5_0.5_withcontext/101-recog-min/decode_cv_test_onlynz
+steps/nnet2/check_ivectors_compatible.sh: WARNING: One of the directories do not contain iVector ID.
+steps/nnet2/check_ivectors_compatible.sh: WARNING: That means it's you who's reponsible for keeping 
+steps/nnet2/check_ivectors_compatible.sh: WARNING: the directories compatible
+steps/nnet3/decode.sh: feature type is raw
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg exp/nnet3_combined/multitask_acc512btn_tdnn1024_0.5_0.5_withcontext/101-recog-min/decode_cv_test_onlynz
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_combined/multitask_acc512btn_tdnn1024_0.5_0.5_withcontext/101-recog-min/decode_cv_test_onlynz/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,4,23) and mean=9.5
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_combined/multitask_acc512btn_tdnn1024_0.5_0.5_withcontext/101-recog-min/decode_cv_test_onlynz/log/analyze_lattice_depth_stats.log
+score best paths
+local/score.sh --iter final --cmd run.pl --mem 4G data/101-recog-min/cv_test_onlynz_hires /home/abhinav/kaldi/accents/exp/tri4/graph_sw1_tg exp/nnet3_combined/multitask_acc512btn_tdnn1024_0.5_0.5_withcontext/101-recog-min/decode_cv_test_onlynz
+local/score.sh: scoring with word insertion penalty=0.0,0.5,1.0
+score confidence and timing with sclite
+Decoding done.
+%WER 31.42 [ 3263 / 10386, 149 ins, 1316 del, 1798 sub ] exp/nnet3/multitask/101-recognition/decode_cv_dev_nz/wer_7_0.0
+%WER 36.86 [ 1876 / 5089, 106 ins, 737 del, 1033 sub ] exp/nnet3/multitask/101-recognition/decode_cv_test_onlynz/wer_7_0.0
+%WER 33.35 [ 3464 / 10386, 174 ins, 1381 del, 1909 sub ] exp/nnet3/multitask_0.4_0.6/101-recognition/decode_cv_dev_nz/wer_7_0.0
+%WER 38.65 [ 1967 / 5089, 106 ins, 788 del, 1073 sub ] exp/nnet3/multitask_0.4_0.6/101-recognition/decode_cv_test_onlynz/wer_7_0.0
+%WER 29.33 [ 3046 / 10386, 228 ins, 1030 del, 1788 sub ] exp/nnet3/multitask_0.6_0.4/101-recognition/decode_cv_dev_nz/wer_7_0.0
+%WER 33.19 [ 1689 / 5089, 125 ins, 498 del, 1066 sub ] exp/nnet3/multitask_0.6_0.4/101-recognition/decode_cv_test_onlynz/wer_7_0.0
+%WER 29.42 [ 3056 / 10386, 194 ins, 1089 del, 1773 sub ] exp/nnet3/multitask_0.7_0.3/101-recognition/decode_cv_dev_nz/wer_7_0.0
+%WER 31.81 [ 1619 / 5089, 109 ins, 524 del, 986 sub ] exp/nnet3/multitask_0.7_0.3/101-recognition/decode_cv_test_onlynz/wer_7_0.0
+%WER 28.01 [ 2909 / 10386, 183 ins, 999 del, 1727 sub ] exp/nnet3/multitask_0.8_0.2/101-recognition/decode_cv_dev_nz/wer_7_0.0
+%WER 31.48 [ 1602 / 5089, 114 ins, 503 del, 985 sub ] exp/nnet3/multitask_0.8_0.2/101-recognition/decode_cv_test_onlynz/wer_7_0.0
+%WER 27.97 [ 2905 / 10386, 181 ins, 986 del, 1738 sub ] exp/nnet3/multitask_0.9_0.1/101-recognition/decode_cv_dev_nz/wer_7_0.0
+%WER 30.16 [ 1535 / 5089, 98 ins, 479 del, 958 sub ] exp/nnet3/multitask_0.9_0.1/101-recognition/decode_cv_test_onlynz/wer_7_0.0
+%WER 27.15 [ 2820 / 10386, 187 ins, 877 del, 1756 sub ] exp/nnet3/multitask_accentOutputAt2_0.5_0.5/101-recognition/decode_cv_dev_nz/wer_7_0.0
+%WER 30.58 [ 1556 / 5089, 104 ins, 459 del, 993 sub ] exp/nnet3/multitask_accentOutputAt2_0.5_0.5/101-recognition/decode_cv_test_onlynz/wer_7_0.0
+%WER 27.69 [ 2876 / 10386, 215 ins, 879 del, 1782 sub ] exp/nnet3/multitask_accentOutputAt3_0.5_0.5/101-recognition/decode_cv_dev_nz/wer_7_0.0
+%WER 31.07 [ 1581 / 5089, 95 ins, 469 del, 1017 sub ] exp/nnet3/multitask_accentOutputAt3_0.5_0.5/101-recognition/decode_cv_test_onlynz/wer_7_0.5
+%WER 27.63 [ 2870 / 10386, 207 ins, 901 del, 1762 sub ] exp/nnet3/multitask_accentOutputAt3_0.6_0.4/101-recognition/decode_cv_dev_nz/wer_7_0.0
+%WER 31.74 [ 1615 / 5089, 120 ins, 470 del, 1025 sub ] exp/nnet3/multitask_accentOutputAt3_0.6_0.4/101-recognition/decode_cv_test_onlynz/wer_7_0.0
+%WER 27.52 [ 2858 / 10386, 195 ins, 893 del, 1770 sub ] exp/nnet3/multitask_accentOutputAt3_0.7_0.3/101-recognition/decode_cv_dev_nz/wer_7_0.0
+%WER 30.95 [ 1575 / 5089, 126 ins, 442 del, 1007 sub ] exp/nnet3/multitask_accentOutputAt3_0.7_0.3/101-recognition/decode_cv_test_onlynz/wer_7_0.0
+%WER 28.73 [ 2984 / 10386, 201 ins, 975 del, 1808 sub ] exp/nnet3/multitask_accentOutputAt4_0.4_0.6/101-recognition/decode_cv_dev_nz/wer_7_0.0
+%WER 34.29 [ 1745 / 5089, 128 ins, 557 del, 1060 sub ] exp/nnet3/multitask_accentOutputAt4_0.4_0.6/101-recognition/decode_cv_test_onlynz/wer_7_0.0
+%WER 28.16 [ 2925 / 10386, 207 ins, 918 del, 1800 sub ] exp/nnet3/multitask_accentOutputAt4_0.5_0.5/101-recognition/decode_cv_dev_nz/wer_7_0.0
+%WER 33.35 [ 1697 / 5089, 143 ins, 506 del, 1048 sub ] exp/nnet3/multitask_accentOutputAt4_0.5_0.5/101-recognition/decode_cv_test_onlynz/wer_7_0.0
+%WER 27.63 [ 2870 / 10386, 207 ins, 901 del, 1762 sub ] exp/nnet3/multitask_accentOutputAt4_0.6_0.4/101-recognition/decode_cv_dev_nz/wer_7_0.0
+%WER 31.74 [ 1615 / 5089, 120 ins, 470 del, 1025 sub ] exp/nnet3/multitask_accentOutputAt4_0.6_0.4/101-recognition/decode_cv_test_onlynz/wer_7_0.0
+%WER 27.52 [ 2858 / 10386, 195 ins, 893 del, 1770 sub ] exp/nnet3/multitask_accentOutputAt4_0.7_0.3/101-recognition/decode_cv_dev_nz/wer_7_0.0
+%WER 30.95 [ 1575 / 5089, 126 ins, 442 del, 1007 sub ] exp/nnet3/multitask_accentOutputAt4_0.7_0.3/101-recognition/decode_cv_test_onlynz/wer_7_0.0
+%WER 29.96 [ 3112 / 10386, 205 ins, 1080 del, 1827 sub ] exp/nnet3/multitask_accentOutputAt5_0.4_0.6/101-recognition/decode_cv_dev_nz/wer_7_0.0
+%WER 34.98 [ 1780 / 5089, 137 ins, 564 del, 1079 sub ] exp/nnet3/multitask_accentOutputAt5_0.4_0.6/101-recognition/decode_cv_test_onlynz/wer_7_0.0
+%WER 29.02 [ 3014 / 10386, 196 ins, 1015 del, 1803 sub ] exp/nnet3/multitask_accentOutputAt5_0.5_0.5/101-recognition/decode_cv_dev_nz/wer_7_0.0
+%WER 34.13 [ 1737 / 5089, 122 ins, 555 del, 1060 sub ] exp/nnet3/multitask_accentOutputAt5_0.5_0.5/101-recognition/decode_cv_test_onlynz/wer_7_0.0
+%WER 28.06 [ 2914 / 10386, 195 ins, 994 del, 1725 sub ] exp/nnet3/multitask_accentOutputAt5_0.6_0.4/101-recognition/decode_cv_dev_nz/wer_7_0.0
+%WER 32.36 [ 1647 / 5089, 124 ins, 524 del, 999 sub ] exp/nnet3/multitask_accentOutputAt5_0.6_0.4/101-recognition/decode_cv_test_onlynz/wer_7_0.0
+%WER 28.11 [ 2920 / 10386, 199 ins, 970 del, 1751 sub ] exp/nnet3/multitask_accentOutputAt5_0.7_0.3/101-recognition/decode_cv_dev_nz/wer_7_0.0
+%WER 32.68 [ 1663 / 5089, 115 ins, 548 del, 1000 sub ] exp/nnet3/multitask_accentOutputAt5_0.7_0.3/101-recognition/decode_cv_test_onlynz/wer_7_0.0
+%WER 31.02 [ 3222 / 10386, 186 ins, 1177 del, 1859 sub ] exp/nnet3/multitask_bottleneck_300_0.5_0.5/101-recognition/decode_cv_dev_nz/wer_7_0.0
+%WER 36.69 [ 1867 / 5089, 104 ins, 745 del, 1018 sub ] exp/nnet3/multitask_bottleneck_300_0.5_0.5/101-recognition/decode_cv_test_onlynz/wer_7_0.0
+%WER 31.13 [ 3233 / 10386, 194 ins, 1212 del, 1827 sub ] exp/nnet3/multitask_bottleneck_512_0.5_0.5/101-recognition/decode_cv_dev_nz/wer_7_0.0
+%WER 36.37 [ 1851 / 5089, 104 ins, 705 del, 1042 sub ] exp/nnet3/multitask_bottleneck_512_0.5_0.5/101-recognition/decode_cv_test_onlynz/wer_7_0.0
+%WER 31.22 [ 3243 / 10386, 212 ins, 1130 del, 1901 sub ] exp/nnet3/multitask_removedOneLayer_0.5_0.5/101-recognition/decode_cv_dev_nz/wer_7_0.0
+%WER 33.88 [ 1724 / 5089, 120 ins, 528 del, 1076 sub ] exp/nnet3/multitask_removedOneLayer_0.5_0.5/101-recognition/decode_cv_test_onlynz/wer_7_0.0
+%WER 22.85 [ 2373 / 10386, 236 ins, 463 del, 1674 sub ] exp/nnet3_combined/multitask_acc512btn_tdnn1024_0.5_0.5_withcontext/101-recog-min/decode_cv_dev_nz/wer_8_0.0
+%WER 29.00 [ 1476 / 5089, 143 ins, 284 del, 1049 sub ] exp/nnet3_combined/multitask_acc512btn_tdnn1024_0.5_0.5_withcontext/101-recog-min/decode_cv_test_onlynz/wer_8_0.0
+%WER 32.53 [ 1917 / 5893, 163 ins, 574 del, 1180 sub ] exp/nnet3_separate_accents/multitask_separate_accents_0.14_nz/101/decode_dev/wer_7_0.0
+%WER 58.35 [ 1663 / 2850, 22 ins, 1063 del, 578 sub ] exp/nnet3_separate_accents/multitask_separate_accents_0.14_nz/102/decode_dev/wer_7_0.0
+%WER 67.43 [ 617 / 915, 15 ins, 362 del, 240 sub ] exp/nnet3_separate_accents/multitask_separate_accents_0.14_nz/103/decode_dev/wer_7_0.0
+%WER 55.32 [ 442 / 799, 6 ins, 273 del, 163 sub ] exp/nnet3_separate_accents/multitask_separate_accents_0.14_nz/104/decode_dev/wer_7_0.0
+%WER 33.33 [ 1964 / 5893, 137 ins, 615 del, 1212 sub ] exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/101/decode_dev/wer_7_0.0
+%WER 59.75 [ 1703 / 2850, 18 ins, 1069 del, 616 sub ] exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/102/decode_dev/wer_7_0.0
+%WER 68.09 [ 623 / 915, 11 ins, 366 del, 246 sub ] exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/103/decode_dev/wer_7_0.0
+%WER 56.20 [ 449 / 799, 6 ins, 273 del, 170 sub ] exp/nnet3_separate_accents/multitask_separate_accents_variable_nz/104/decode_dev/wer_7_0.0
+%WER 31.87 [ 1878 / 5893, 122 ins, 637 del, 1119 sub ] exp/nnet3_separate_accents/multitask_separate_accents_variable_nz_4_accents/101/decode_dev/wer_7_0.0
+%WER 57.40 [ 1636 / 2850, 13 ins, 1041 del, 582 sub ] exp/nnet3_separate_accents/multitask_separate_accents_variable_nz_4_accents/102/decode_dev/wer_7_0.0
+%WER 66.01 [ 604 / 915, 5 ins, 387 del, 212 sub ] exp/nnet3_separate_accents/multitask_separate_accents_variable_nz_4_accents/103/decode_dev/wer_7_0.0
+%WER 50.81 [ 406 / 799, 8 ins, 249 del, 149 sub ] exp/nnet3_separate_accents/multitask_separate_accents_variable_nz_4_accents/104/decode_dev/wer_7_0.0
