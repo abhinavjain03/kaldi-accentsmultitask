@@ -416,7 +416,7 @@ if [ $decode -eq 1 ]; then
 		ivector_opts="--online-ivector-dir ${ivec_dir}"
 		# appended_dir=data/101-recog-min/${x}_hires
 		mkdir -p $decode
-		steps/nnet3/decode.sh --nj $nj --cmd "$decode_cmd" \
+		steps/nnet3/decode.sh --nj $nj --cmd "$decode_cmd" --iter final_adj \
 		      --stage $decode_stage \
 		      --beam $dnn_beam --lattice-beam $dnn_lat_beam \
 		      $score_opts $ivector_opts \
