@@ -24,7 +24,7 @@ Note : In the scripts,
 4. TestNZ - cv_test_onlynz
 5. TestIN - cv_test_onlyindian
 
-# Steps - 
+# Steps
 Rest of the steps are pretty standard.
 1. **MFCCS** - The script creates both standard and hires MFCCS of train, dev and test data provided the correct paths. It can also create speed perturbed data and its MFCCs (used in training).
 2. **ivectors** - The script assumes a pretrained ivector extractor. The scripts for training an ivector extractor comes with kaldi.
