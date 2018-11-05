@@ -9,7 +9,7 @@ Pre-Requisites -
 
 ## What we are doing?
 To start with, we are training a standard Multitask Learning(MTL) Network where the primary task (T1 hereon) is the triphone state recognition and the secondary task (T2 hereon) is the accent classification. At the end, we use the T1 network as our DNN Acoustic Model for Speech Recognition.
-This is the script [StartScript](./multitask_run_2_base_2.sh).
+This is the script [multitask_run_2_base_2.sh](./multitask_run_2_base_2.sh).
 
 ## Data Prep
 1. We adapted the scripts using the babel-multilang setup where they train a multilingual system using multiple languages.
@@ -28,7 +28,7 @@ This is the script [StartScript](./multitask_run_2_base_2.sh).
 Rest of the steps are pretty standard.
 1. **MFCCS** - The script creates both standard and hires MFCCS of train, dev and test data provided the correct paths. It can also create speed perturbed data and its MFCCs (used in training).
 2. **ivectors** - The script assumes a pretrained ivector extractor. The scripts for training an ivector extractor comes with kaldi.
-3. **alignments** - For MTL, two types of alignments are required. The alignments for **T1** are the standard triphone state label sequences. The script can do that for you. It assumes a pre-trained GMM-HMM model to create those. Generating the alignments of **T2** is somewhat typical. To summarize, one needs accent label for every frame of each utterance in kaldi table format indexed by utterance ids.
+3. **alignments** - For MTL, two types of alignments are required. The alignments for **T1** are the standard triphone state label sequences. The script can do that for you. It assumes a pre-trained GMM-HMM model to create those. Generating the alignments of **T2** is somewhat typical. To summarize, one needs accent label for every frame of each utterance in kaldi table format indexed by utterance ids. Look at [temp.cc](./temp.cc)
 4. Once all these are done, xconfig and training is standard.
 5. We use the T1 network for final decoding.
 
