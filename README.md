@@ -1,5 +1,4 @@
 # Accent Embeddings - Multitask Learning
-========================================
 This repository store a part of the work done as mentioned in the paper submitted in Interspeech 2018.
 [Paper](https://www.isca-speech.org/archive/Interspeech_2018/abstracts/1864.html "IS1864")
 
