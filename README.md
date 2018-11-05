@@ -18,11 +18,11 @@ This is the script [StartScript](./multitask_run_2_base_2.sh).
 4. We named the directories - 101-recognition for T1, and 102-class for T2. 101-recogntion contained the training set cv-train-nz as well as all the dev and test sets. 102-class contained the same training set with a slight variation, cv-trainx-nz, this is contains the same utterances as cv-train-nz but each utterance-id is appended with an 'x' just to make the utterance ids from cv-train-nz and cv-trainx-nz different. Kaldi requires this for MTL.
 
 Note : In the scripts,
-Train7 - cv_train_nz, cv_trainx_nz
-Dev4 - cv_dev_nz
-Test4 - cv_test_nz
-TestNZ - cv_test_onlynz
-TestIN - cv_test_onlyindian
+1.Train7 - cv_train_nz, cv_trainx_nz
+2.Dev4 - cv_dev_nz
+3.Test4 - cv_test_nz
+4.TestNZ - cv_test_onlynz
+5.TestIN - cv_test_onlyindian
 
 # Steps - 
 Rest of the steps are pretty standard.
