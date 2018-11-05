@@ -1,20 +1,28 @@
 # Accent Embeddings - Multitask Learning
-This repository stores the work done as mentioned in the paper submitted in Interspeech 2018.
-https://www.isca-speech.org/archive/Interspeech_2018/abstracts/1864.html
+This repository store a part of the work done as mentioned in the paper submitted in Interspeech 2018.
+[Paper](https://www.isca-speech.org/archive/Interspeech_2018/abstracts/1864.html "IS1864")
 
 Pre-Requisites - 
 1. You have worked with the Kaldi toolkit and are quite familiar with it, meaning you are familiar with training a DNN Acoustic Model and know the requirements.
-2. We use Mozilla CommonVoice Dataset for all the experiments. A detailed split can be found at - https://sites.google.com/view/accentsunearthed-dhvani/
+2. We use Mozilla CommonVoice Dataset for all the experiments. A detailed split can be found at - 
+[Accents Unearthed](https://sites.google.com/view/accentsunearthed-dhvani/ "AccentsUnearthed")
 
 # What we are doing?
 To start with, we are training a standard Multitask Learning(MTL) Network where the primary task (T1 hereon) is the triphone state recognition and the secondary task (T2 hereon) is the accent classification. At the end, we use the T1 network as our DNN Acoustic Model for Speech Recognition.
-This is the script multitask_run_2_base_2.sh.
+This is the script [StartScript](./multitask_run_2_base_2.sh).
 
 # Data Prep
 1. We adapted the scripts using the babel-multilang setup where they train a multilingual system using multiple languages.
 2. As we have 2 tasks, so the data folder should contain 2 directories, one for each task.
 3. Each of these directories will contain the training as well as testing data in Kaldi format.
-4. We named the directories - 101-recognition for T1, and 102-class for T2. 101-recogntion contained the training set cv-train-nz as well as all the dev and test sets. 102-class contained the same training set with a slight variation, cv-trainx-nz, this is contains the same utterances as cv-train-nz but each utterance-id is appended with an 'x' just to make the utterance ids from cv-train-nz and cv-trainx-nz different. Kaldi requires this while MTL.
+4. We named the directories - 101-recognition for T1, and 102-class for T2. 101-recogntion contained the training set cv-train-nz as well as all the dev and test sets. 102-class contained the same training set with a slight variation, cv-trainx-nz, this is contains the same utterances as cv-train-nz but each utterance-id is appended with an 'x' just to make the utterance ids from cv-train-nz and cv-trainx-nz different. Kaldi requires this for MTL.
+
+Note : In the scripts,
+Train7 - cv_train_nz, cv_trainx_nz
+Dev4 - cv_dev_nz
+Test4 - cv_test_nz
+TestNZ - cv_test_onlynz
+TestIN - cv_test_onlyindian
 
 # Steps - 
 Rest of the steps are pretty standard.
