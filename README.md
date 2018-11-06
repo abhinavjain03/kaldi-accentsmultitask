@@ -34,3 +34,5 @@ Rest of the steps are pretty standard.
 
 
 **Note :** The rest of the scripts are minor variations of this said script where we modify the network architecture.
+
+This repo along with [Accent Classifier](https://github.com/abhinavjain03/kaldi-accentrecognizer "AccentClassifier") & [Accent Embeddings - HMM & Baseline](https://github.com/abhinavjain03/kaldi-accents "AE - HMM & Baseline") form the complete work mentioned in the [Paper](https://www.isca-speech.org/archive/Interspeech_2018/abstracts/1864.html "IS1864").
