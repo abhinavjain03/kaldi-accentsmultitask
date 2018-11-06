@@ -1,6 +1,10 @@
 # Accent Embeddings - Multitask Learning
-This repository store a part of the work done as mentioned in the paper submitted in Interspeech 2018.
-[Paper](https://www.isca-speech.org/archive/Interspeech_2018/abstracts/1864.html "IS1864")
+This repo is a part of  
+1. [Accent Embeddings - HMM & Baseline](https://github.com/abhinavjain03/kaldi-accents "AE - HMM & Baseline")
+2. [Accent Classifier](https://github.com/abhinavjain03/kaldi-accentrecognizer "AccentClassifier")  
+3. Current 
+
+and form the complete work mentioned in the paper submitted in Interspeech 2018. [Paper](https://www.isca-speech.org/archive/Interspeech_2018/abstracts/1864.html "IS1864").
 
 Pre-Requisites - 
 1. You have worked with the Kaldi toolkit and are quite familiar with it, meaning you are familiar with training a DNN Acoustic Model and know the requirements.
@@ -34,5 +38,3 @@ Rest of the steps are pretty standard.
 
 
 **Note :** The rest of the scripts are minor variations of this said script where we modify the network architecture.
-
-This repo along with [Accent Classifier](https://github.com/abhinavjain03/kaldi-accentrecognizer "AccentClassifier") & [Accent Embeddings - HMM & Baseline](https://github.com/abhinavjain03/kaldi-accents "AE - HMM & Baseline") form the complete work mentioned in the [Paper](https://www.isca-speech.org/archive/Interspeech_2018/abstracts/1864.html "IS1864").
